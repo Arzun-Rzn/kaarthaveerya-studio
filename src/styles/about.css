@@ -1,0 +1,54 @@
+.about-artist-page {
+    padding: 40px 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #fffaf3;
+    color: #333;
+  }
+  
+  .about-hero {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .about-hero h1 {
+    font-size: 36px;
+    color: #111;
+    margin-bottom: 10px;
+  }
+  
+  .about-hero p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  /* .artist-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  } */
+  
+  .artist-bio {
+    max-width: 100%;
+  }
+  
+  .artist-bio h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000;
+  }
+  
+  .artist-bio p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  
