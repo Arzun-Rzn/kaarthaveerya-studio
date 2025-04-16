@@ -6,17 +6,40 @@
   z-index: 1001;
 }
 
+@media (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+}
+
 .sidebar {
   position: fixed;
   top: 0;
-  left: -350px; /* hide by default */
+  left: -350px;
   width: 250px;
   height: 100%;
+  overflow-y: auto; 
   background-color: #111;
   color: #fff;
   padding: 15px;
   transition: left 0.3s ease-in-out;
   z-index: 1000;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #606060 transparent;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 3px;
 }
 
 .sidebar.open {

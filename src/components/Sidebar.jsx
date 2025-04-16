@@ -32,9 +32,12 @@ const Sidebar = () => {
 
   return (
     <>
-      <span className="menu-icon" onClick={toggleSidebar}>
-        <FiMenu size={28} />
-      </span>
+      {!isOpen && (
+        <span className="menu-icon" onClick={toggleSidebar}>
+          <FiMenu size={28} />
+        </span>
+      )}
+
 
       <div ref={sidebarRef} className={`sidebar ${isOpen ? 'open' : ''}`}>
         <span className="close-btn" onClick={toggleSidebar}>
@@ -43,8 +46,15 @@ const Sidebar = () => {
         <ul>
           <li><Link to="/" onClick={toggleSidebar}>Home</Link></li>
           <li><Link to="/artworks" onClick={toggleSidebar}>Artworks</Link></li>
+          <li><Link to="/books" onClick={toggleSidebar}>Books</Link></li>
           <li><Link to="/store" onClick={toggleSidebar}>Store</Link></li>
-          {/* Add more links here */}
+          <li><Link to="/about" onClick={toggleSidebar}>Artist</Link></li>
+          <li><Link to="/blog" onClick={toggleSidebar}>Blog</Link></li>
+          <li><Link to="/connect" onClick={toggleSidebar}>Connect</Link></li>
+          <li><Link to="/terms" onClick={toggleSidebar}>Terms of use</Link></li>
+          <li><Link to="/privacy" onClick={toggleSidebar}>Privacy</Link></li>
+          <li><Link to="/copyright" onClick={toggleSidebar}>Copyright</Link></li>
+          <li><Link to="/licensing" onClick={toggleSidebar}>Licensing</Link></li>
         </ul>
       </div>
     </>

@@ -14,7 +14,6 @@ const allCategories = {
   "creatures": ['Mythical Beasts', 'Nature Creatures'],
   "divine": ['Gods & Goddesses', 'Cosmic Themes'],
   "expressions": ['Emotion Studies', 'Eyes & Faces'],
-  "perspectives": ['1 Point', '2 Point', '3D'],
 };
 
 const SubArtworks = () => {

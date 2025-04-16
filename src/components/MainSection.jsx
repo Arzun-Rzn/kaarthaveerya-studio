@@ -4,10 +4,11 @@ import Home from '../pages/Home.jsx';
 import About from '../pages/About';
 import Artworks from '../pages/Artworks.jsx';
 import SubArtworks from '../pages/SubArtworks.jsx';
-import Contact from '../pages/Contact';
+import Connect from '../pages/Connect.jsx';
 import Privacy from '../pages/Privacy';
 import Copyright from '../pages/Copyright';
-import Shop from '../pages/Shop';
+import ArtStore from '../pages/ArtStore.jsx';
+import BookStore from '../pages/BookStore.jsx';
 import Blog from '../pages/Blogs';
 import Books from '../pages/Books.jsx';
 import Terms from '../pages/Terms';
@@ -22,8 +23,9 @@ const MainSection = () => {
           <Route path="/artworks" element={<Artworks />} />
           <Route path="/artworks/:categoryId" element={<SubArtworks />} />
           <Route path="/books" element={<Books />} />
-          <Route path="/contact" element={<Contact />} />         
-          <Route path="/store" element={<Shop />} />
+          <Route path="/connect" element={<Connect />} />         
+          <Route path="/artstore" element={<ArtStore />} />
+          <Route path="/bookstore" element={<BookStore />} />
           <Route path="/blog" element={<Blog />} />          
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />

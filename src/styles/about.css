@@ -1,24 +1,26 @@
 .about-artist-page {
     padding: 40px 20px;
     font-family:Arial, Helvetica, sans-serif;
-    background-color: #fffaf3;
-    color: #333;
+    color: #000000;
   }
   
   .about-hero {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
   }
   
   .about-hero h1 {
     font-size: 36px;
+    font-family: Arial, Helvetica, sans-serif;
     color: #111;
     margin-bottom: 10px;
+    letter-spacing: 1px;
   }
   
   .about-hero p {
     font-size: 18px;
-    color: #666;
+    font-style: italic;
+    color: #3d3d3d;
   }
   
   .about-content {

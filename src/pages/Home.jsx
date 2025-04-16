@@ -33,7 +33,7 @@ const Home = () => {
           </div>
         </div>
         <div className="store-button-container">
-          <Link to="/store" className="store-button">Visit Art Shop</Link>
+          <Link to="/artstore" className="store-button">Visit Art Store</Link>
         </div>
 
       </section>

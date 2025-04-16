@@ -5,8 +5,8 @@ const About = () => {
   return (
     <main className="about-artist-page">
       <section className="about-hero">
-        <h1>Meet the Artist</h1>
-        <p>A journey through soul, color, and storytelling.</p>
+        <h1>ABOUT ARTIST</h1>
+        <p>Every artist is first an amateur.</p>
       </section>
 
       <section className="about-content">

@@ -1,0 +1,42 @@
+.licensing-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+    color: #000000;
+  }
+  
+  .licensing-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000000;
+  }
+  
+  .licensing-container p, 
+  .licensing-container li {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #000000;
+  }
+  
+  .licensing-container h2 {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    color: #000000;
+    border-left: 4px solid #000000;
+    padding-left: 12px;
+  }
+  
+  .licensing-container ul {
+    padding-left: 20px;
+  }
+  
+  .licensing-container li {
+    margin-bottom: 10px;
+  }
+  
+  .licensing-container a {
+    color: #000000;
+    text-decoration: underline;
+  }
+  

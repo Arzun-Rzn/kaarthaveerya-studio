@@ -5,7 +5,9 @@ import '../styles/artworks.css';
 const categoryList = [
   { title: 'Original Artworks', path: 'original-artworks' },
   { title: 'References', path: 'references' },
+  { title: 'Illustrations', path: 'illustrations' },
   { title: 'Inspirations', path: 'inspirations' },
+  { title: 'Random learninigs', path: 'random-learninigs' },
   { title: 'Anatomy Art', path: 'anatomy-art' },
   { title: 'Muses', path: 'muses' },
   { title: 'Indian Sculptures', path: 'indian-sculptures' },
@@ -14,13 +16,13 @@ const categoryList = [
   { title: 'Creatures', path: 'creatures' },
   { title: 'Divine', path: 'divine' },
   { title: 'Expressions', path: 'expressions' },
-  { title: 'Perspectives', path: 'perspectives' },
 ];
 
 const Artworks = () => {
   return (
     <main className="artworks-page">
-      <h1>Explore Categories</h1>
+      <h1>ARTWORKS</h1>
+      <h2>Explore Categories</h2>
         <div className="category-grid">
           {categoryList.map((cat, index) => (
             <Link to={`/artworks/${cat.path}`} key={index} className="category-card-link">
@@ -29,6 +31,9 @@ const Artworks = () => {
               </div>
             </Link>
           ))}
+        </div>
+        <div className="store-button-container">
+            <Link to="/artstore" className="store-button">Visit Art Store</Link>
         </div>
     </main>
   );
