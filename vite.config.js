@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
-    base: '/kaarthaveerya-studio/',
-    plugins: [react()],
+  plugins: [react()],
+  base: '/', // ✅ Or you can remove this line entirely if not needed
 })
