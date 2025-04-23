@@ -1,0 +1,12 @@
+body {
+    margin: 0px;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:#fef5f4;
+    color: #222;
+  }
+  
+  .app {
+    padding: 20px;
+  }
+  
