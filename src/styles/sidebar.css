@@ -1,9 +1,11 @@
+/* Sidebar icon */
 .menu-icon {
-  position: fixed;
+  position:absolute;
   top: 20px;
   left: 20px;
   cursor: pointer;
   z-index: 1001;
+  color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -12,13 +14,14 @@
   }
 }
 
+/* Sidebar styles */
 .sidebar {
   position: fixed;
   top: 0;
   left: -350px;
   width: 250px;
   height: 100%;
-  overflow-y: auto; 
+  overflow-y: auto;
   background-color: #111;
   color: #fff;
   padding: 15px;
@@ -42,10 +45,12 @@
   border-radius: 3px;
 }
 
+/* Open the sidebar */
 .sidebar.open {
   left: 0;
 }
 
+/* Close button */
 .sidebar .close-btn {
   position: absolute;
   top: 15px;
@@ -54,6 +59,7 @@
   color: #fff;
 }
 
+/* Sidebar links */
 .sidebar ul {
   list-style-type: none;
   padding: 0;
@@ -79,4 +85,9 @@
 .sidebar ul li a:hover {
   transform: scale(1.05);
   background-color: #4a4949;
+}
+
+/* Disable body scrolling when sidebar is open */
+body.sidebar-open {
+  overflow: hidden;
 }

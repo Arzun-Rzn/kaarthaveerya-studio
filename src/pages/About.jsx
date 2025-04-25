@@ -11,7 +11,7 @@ const About = () => {
 
       <section className="about-content">
         <div className="artist-bio">
-          <h2>Hello, I'm Kaarthaveerya Arjun</h2>
+          <h3>Hello, I'm Kaarthaveerya Arjun</h3>
           <p>
             I’m a self-taught artist and visual storyteller, crafting art that weaves myth, nature, and emotion into one flowing canvas.
             My journey began not in a studio, but under trees, near rivers, and amidst wandering thoughts.

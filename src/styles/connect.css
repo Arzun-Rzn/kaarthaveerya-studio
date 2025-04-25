@@ -1,6 +1,6 @@
 .social-container {
   padding: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   text-align: center;
 }
 
@@ -44,3 +44,31 @@
 .social-card p{
   font-size: 1.2rem;
 }
+
+@media screen and (max-width: 768px) {
+  .social-grid {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 1rem;
+    margin: 20px;
+    
+  }
+
+  .social-container h2{
+    font-size: 1.4rem;
+  }
+
+  .social-card {
+    padding: 0.6rem;
+    transform: scale(0.9);
+    
+  }
+
+  .social-card p{
+    font-size: 1rem;
+  }
+
+  .social-card:hover {
+    transform: scale(0.85); /* still shrinks a bit on hover */
+  }
+}
+

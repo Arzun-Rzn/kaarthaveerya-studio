@@ -20,6 +20,12 @@ const blogs = [
     title: "Sketching the Invisible",
     summary: "Capturing ideas, moods, and unseen beauty in sketches.",
     link: "/blog/sketching"
+  },
+  {
+    id: 4,
+    title: "Following patterns",
+    summary: "Capturing ideas, moods, and unseen beauty in sketches.",
+    link: "/blog/sketching"
   }
 ];
 

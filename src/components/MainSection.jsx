@@ -4,7 +4,6 @@ import Home from '../pages/Home.jsx';
 import About from '../pages/About';
 import Artworks from '../pages/Artworks.jsx';
 import ArtworkCategory from '../pages/ArtworkCategory';
-import SubArtworks from '../pages/SubArtworks.jsx';
 import Connect from '../pages/Connect.jsx';
 import Privacy from '../pages/Privacy';
 import Copyright from '../pages/Copyright';
@@ -22,8 +21,7 @@ const MainSection = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/artworks" element={<Artworks />} />
-          <Route path="/artworks/:categoryId" element={<SubArtworks />} />
-          <Route path="/artworks/:category" element={<ArtworkCategory />} />
+          <Route path="/artworks/:categoryName" element={<ArtworkCategory />} />
           <Route path="/books" element={<Books />} />
           <Route path="/connect" element={<Connect />} />         
           <Route path="/artstore" element={<ArtStore />} />

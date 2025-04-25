@@ -1,9 +1,11 @@
 import React from 'react'
+import '../styles/artStore.css';
 
 const ArtStore = () => {
   return (              
-    <div>
-      <h1>Art Store</h1>
+    <div className='store-container'>
+      <h1>ART STORE</h1>
+      <h3>The store is under construction. Will Update soon.</h3>
     </div>
   )
 }

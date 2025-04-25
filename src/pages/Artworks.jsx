@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/artworks.css';
 
@@ -7,7 +7,7 @@ const categoryList = [
   { title: 'References', path: 'references' },
   { title: 'Illustrations', path: 'illustrations' },
   { title: 'Inspirations', path: 'inspirations' },
-  { title: 'Random learninigs', path: 'random-learninigs' },
+  { title: 'Random Learnings', path: 'random-learninigs' },
   { title: 'Anatomy Art', path: 'anatomy-art' },
   { title: 'Muses', path: 'muses' },
   { title: 'Malavika Mohanan', path: 'malavika-mohanan' },
@@ -20,29 +20,16 @@ const categoryList = [
 ];
 
 const Artworks = () => {
-  const [images, setImages] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState('original-artworks');  // Default category
-
-  useEffect(() => {
-    const loadImages = async () => {
-      const fetchedImages = await fetchImagesFromCloudinary(selectedCategory);  // Fetch images for selected category
-      setImages(fetchedImages);
-    };
-
-    loadImages();
-  }, [selectedCategory]); 
-
   return (
     <main className="artworks-page">
       <h1>ARTWORKS</h1>
-      <h3>Explore Categories</h3>
+      <p>Explore Categories</p>
       <div className="category-grid">
         {categoryList.map((cat, index) => (
           <Link 
             to={`/artworks/${cat.path}`} 
             key={index} 
-            className="category-card-link" 
-            onClick={() => setSelectedCategory(cat.path)}
+            className="category-card-link"
           >
             <div className="category-card">
               <h2>{cat.title}</h2>
@@ -50,6 +37,9 @@ const Artworks = () => {
           </Link>
         ))}
       </div>
+      <div className="store-button-container">
+                <Link to="/artStore" className="store-button">Visit Art Store</Link>
+              </div>
     </main>
   );
 };

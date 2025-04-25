@@ -30,11 +30,13 @@ const Navbar = () => {
             <li><NavLink to="/licensing" className={({ isActive }) => isActive ? 'active' : ''}>LICENSING INFO</NavLink></li>
           </ul>
         </li>
-
+      
+      </ul>
+      <section>
         <li className="search-box">
           <input type="text" placeholder="What are you looking for?" />
         </li>
-      </ul>
+      </section>
     </nav>
   );
 };

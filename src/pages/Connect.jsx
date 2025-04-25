@@ -1,19 +1,22 @@
 import React from "react";
 import "../styles/connect.css";
-import { FaEnvelope, FaInstagram, FaYoutube, FaFacebook, FaTwitter, FaBehance, FaPinterest, FaLinkedin, FaTumblr, FaWhatsapp, FaTelegram } from "react-icons/fa";
+import { FaEnvelope, FaInstagram, FaYoutube,FaReddit, FaFacebook, FaTwitter, FaBehance, FaPinterest, FaLinkedin, FaTumblr} from "react-icons/fa";
 
 const socials = [
-  { name: "Gmail", icon: <FaEnvelope />, link: "mailto:kaarthaveeryaa.arjuna@gmail.com" },
-  { name: "Instagram", icon: <FaInstagram />, link: "https://instagram.com/yourusername" },
-  { name: "YouTube", icon: <FaYoutube />, link: "https://youtube.com/@yourchannel" },
-  { name: "Facebook", icon: <FaFacebook />, link: "https://facebook.com/yourusername" },
-  { name: "Twitter", icon: <FaTwitter />, link: "https://twitter.com/yourusername" },
-  { name: "Behance", icon: <FaBehance />, link: "https://behance.net/yourusername" },
-  { name: "Pinterest", icon: <FaPinterest />, link: "https://pinterest.com/yourusername" },
-  { name: "LinkedIn", icon: <FaLinkedin />, link: "https://linkedin.com/in/yourusername" },
-  { name: "Tumblr", icon: <FaTumblr />, link: "https://yourusername.tumblr.com" },
-  { name: "WhatsApp", icon: <FaWhatsapp />, link: "https://wa.me/yourphonenumber" },
-  { name: "Telegram", icon: <FaTelegram />, link: "https://t.me/yourusername" },
+  {
+    name: "Gmail",
+    icon: <FaEnvelope />,
+    link: "https://mail.google.com/mail/?view=cm&to=kaarthaveeryaa.arjuna@gmail.com"
+  },
+  { name: "Instagram", icon: <FaInstagram />, link: "https://www.instagram.com/kaarthaveerya/"},
+  { name: "YouTube", icon: <FaYoutube />, link: "https://www.youtube.com/@KaarthaveeryaArjuna" },
+  { name: "Facebook", icon: <FaFacebook />, link: "https://www.facebook.com/profile.php?id=61575235523785" },
+  { name: "Twitter", icon: <FaTwitter />, link: "https://x.com/kaarthaveerrya" },
+  { name: "Behance", icon: <FaBehance />, link: "https://www.behance.net/KaarthaveeryaArjun" },
+  { name: "Pinterest", icon: <FaPinterest />, link: "https://in.pinterest.com/kaarthaveeryaa/_created/" },
+  { name: "LinkedIn", icon: <FaLinkedin />, link: "https://linkedin.com/" },
+  { name: "Tumblr", icon: <FaTumblr />, link: "https://www.tumblr.com/blog/kaarthaveerya-arjun" },
+  { name: "Reddit", icon: <FaReddit />, link: "https://www.reddit.com/u/kaarthaveerya/s/7MnUIMvA8D" }
 ];
 
 const Connect = () => {

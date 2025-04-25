@@ -48,7 +48,7 @@ const Licensing = () => {
         <p>
           When sharing or using content (where permitted), clear credit must be given to the artist as:
           <br />
-          <strong>© Kaarthaveeryaa Arjuna</strong>
+          <strong>© Kaarthaveerya Arjun</strong>
         </p>
       </section>
 
