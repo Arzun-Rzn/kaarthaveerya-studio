@@ -41,7 +41,7 @@
   .logo {
     width: 50px; /* Adjust the size of the logo */
     height: 50px; /* Keep the aspect ratio square */
-    margin-left: 20px;
+    margin-left: 0px;
     margin-right: 0px;
     padding-bottom: 48px;
   }
