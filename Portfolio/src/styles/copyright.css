@@ -1,0 +1,34 @@
+.copyright-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+    color: #000000;
+  }
+  
+  .copyright-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000000;
+  }
+  
+  .copyright-container p, 
+  .copyright-container li {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #000000;
+  }
+  
+  .copyright-container h2 {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    color: #000000;
+    border-left: 4px solid #000000;
+    padding-left: 12px;
+  }
+  
+  .copyright-container a {
+    color: #000000;
+    text-decoration: underline;
+  }
+  

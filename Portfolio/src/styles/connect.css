@@ -1,0 +1,75 @@
+.social-container {
+  padding: 5px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.social-container h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  letter-spacing: 1.2px;
+  color: #222;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.social-card {
+  background-color: #bdbeff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-decoration: none;
+  color: #000000;
+  transition: transform 0.2s;
+}
+
+.social-card:hover {
+  transform: scale(0.88); 
+  background: #ffb4b4;
+  box-shadow: 0 15px 5px rgba(0, 0, 0, 0.25);
+}
+
+.social-card .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #000000; 
+  margin-top: 15px;
+}
+
+.social-card p{
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .social-grid {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 1rem;
+    margin: 20px;
+    
+  }
+
+  .social-container h2{
+    font-size: 1.4rem;
+  }
+
+  .social-card {
+    padding: 0.6rem;
+    transform: scale(0.9);
+    
+  }
+
+  .social-card p{
+    font-size: 1rem;
+  }
+
+  .social-card:hover {
+    transform: scale(0.85); /* still shrinks a bit on hover */
+  }
+}
+
