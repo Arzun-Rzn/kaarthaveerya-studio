@@ -17,6 +17,12 @@ cloudinary.config({
 app.get('/api/images/:folder', async (req, res) => {
   const folder = req.params.folder;
   try {
+    console.log("Cloudinary config:", {
+      name: process.env.CLOUDINARY_CLOUD_NAME,
+      key: process.env.CLOUDINARY_API_KEY,
+      secret: process.env.CLOUDINARY_API_SECRET ? "✅ Present" : "❌ Missing"
+    });
+    
     const result = await cloudinary.search
       .expression(`folder:Artworks/${folder}`)
       .sort_by('created_at', 'desc')
