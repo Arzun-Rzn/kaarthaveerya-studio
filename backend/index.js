@@ -1,11 +1,40 @@
 const express = require('express');
+const rateLimit = require('express-rate-limit');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const cloudinary = require('cloudinary').v2;
+const helmet = require('helmet');
 
 dotenv.config();
 const app = express();
-app.use(cors());
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // Limit each IP to 100 requests per windowMs
+  message: 'Too many requests from this IP, please try again after 15 minutes',
+  headers: true,
+});
+
+app.use(limiter);
+
+const allowedOrigins = [
+  'https://www.kaarthaveerya-studio.com/',  // your Vercel frontend URL
+  'http://localhost:5000'                 // for local development
+];
+
+app.use(cors({
+  origin: function(origin, callback){
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1){
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  credentials: true
+}));
+
+app.use(helmet());
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
