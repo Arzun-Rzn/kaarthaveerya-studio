@@ -7,6 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-top">
         <h1 className="footer-logo">KAARTHAVEERYA STUDIO</h1>
+        <p>Website developed by Nagarjuna Jogi</p>
           <a
             href="mailto:kaarthaveeryaa.arjuna@gmail.com"
             target="_blank"
