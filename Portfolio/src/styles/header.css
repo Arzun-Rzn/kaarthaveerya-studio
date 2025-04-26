@@ -1,5 +1,6 @@
  .title {
   display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
   background-color: #000000;
@@ -9,9 +10,9 @@
 
 
 .logo {
-  width: 80px; /* Adjust the size of the logo */
-  height: 80px; /* Keep the aspect ratio square */
-  margin-left: 60px;
+  width: 120px; /* Adjust the size of the logo */
+  height: 120px; /* Keep the aspect ratio square */
+  margin-left: 0px;
   margin-right: 0px;
 }
 
@@ -33,17 +34,17 @@
 
 @media (max-width: 768px) {
   .title {
-    padding: 4rem 1.2rem;
+    padding-top: 2rem;
     margin-top: 0px; /* roomier mobile spacing */
   }
 
 
   .logo {
-    width: 50px; /* Adjust the size of the logo */
-    height: 50px; /* Keep the aspect ratio square */
+    width: 80px; /* Adjust the size of the logo */
+    height: 80px; /* Keep the aspect ratio square */
     margin-left: 0px;
     margin-right: 0px;
-    padding-bottom: 48px;
+    padding-bottom: 0px;
   }
 
   .title h1 {
@@ -55,6 +56,6 @@
     padding-left: 0%;
     /* padding: 0 5px; */
     /* max-width: 95%; */
-    margin-top: 30px;
+    margin-top: 10px;
   }
 }
