@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { useParams,  useLocation} from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
@@ -22,22 +22,29 @@ const ArtworkCategory = () => {
   
   const itemsPerPage = 12;
 
+  const location = useLocation();
+
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top of the page
   }, [location]); 
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://www.kaarthaveerya-studio.com/api/images/${categoryName}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setImages(data.reverse());
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Error fetching images:", err);
-        setLoading(false);
-      });
+    fetch(`https://kaarthaveerya-studio.onrender.com/api/images/${categoryName}`)
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      return res.json();
+    })
+    .then((data) => {
+      setImages(data.reverse());
+      setLoading(false);
+    })
+    .catch((err) => {
+      console.error("Error fetching images:", err.message);
+      setLoading(false);
+    });
   }, [categoryName]);
 
   const totalPages = useMemo(() => Math.ceil(images.length / itemsPerPage), [images]);

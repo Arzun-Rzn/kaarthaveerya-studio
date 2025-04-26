@@ -18,19 +18,12 @@ const limiter = rateLimit({
 app.use(limiter);
 
 const allowedOrigins = [
-  'https://www.kaarthaveerya-studio.com/',  // your Vercel frontend URL
-  'http://localhost:5000'                 // for local development
+  'https://www.kaarthaveerya-studio.com',  // your Vercel frontend URL
+  'http://localhost:5173'                 // for local development
 ];
 
 app.use(cors({
-  origin: function(origin, callback){
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1){
-      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
-      return callback(new Error(msg), false);
-    }
-    return callback(null, true);
-  },
+  origin: allowedOrigins,
   credentials: true
 }));
 
