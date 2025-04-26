@@ -3,11 +3,7 @@ import "../styles/connect.css";
 import { FaEnvelope, FaInstagram, FaYoutube,FaReddit, FaFacebook, FaTwitter, FaBehance, FaPinterest, FaLinkedin, FaTumblr} from "react-icons/fa";
 
 const socials = [
-  {
-    name: "Gmail",
-    icon: <FaEnvelope />,
-    link: "https://mail.google.com/mail/?view=cm&to=kaarthaveeryaa.arjuna@gmail.com"
-  },
+  {name: "Gmail",icon: <FaEnvelope />,link: "mailto:kaarthaveeryaa.arjuna@gmail.com"},
   { name: "Instagram", icon: <FaInstagram />, link: "https://www.instagram.com/kaarthaveerya/"},
   { name: "YouTube", icon: <FaYoutube />, link: "https://www.youtube.com/@KaarthaveeryaArjuna" },
   { name: "Facebook", icon: <FaFacebook />, link: "https://www.facebook.com/profile.php?id=61575235523785" },

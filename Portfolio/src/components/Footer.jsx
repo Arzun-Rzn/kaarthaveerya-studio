@@ -7,17 +7,14 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-top">
         <h1 className="footer-logo">KAARTHAVEERYA STUDIO</h1>
-        <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=kaarthaveeryaa.arjuna@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="footer-email"
-        >
-          📧 kaarthaveeryaa.arjuna@gmail.com
-        </a>
-
-
-
+          <a
+            href="mailto:kaarthaveeryaa.arjuna@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-email"
+          >
+            📧 kaarthaveeryaa.arjuna@gmail.com
+          </a>
         <div className="footer-links">
           <Link to="/about">About Artist</Link>
           <Link to="/artstore">Art store</Link>
@@ -30,13 +27,12 @@ const Footer = () => {
 
       <div className="footer-social">
         <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=kaarthaveeryaa.arjuna@gmail.com"
+          href="mailto:kaarthaveeryaa.arjuna@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
           Gmail
         </a>
-
         <a href="https://www.instagram.com/kaarthaveerya/" target="_blank" rel="noreferrer">Instagram</a>
         <a href="https://www.facebook.com/profile.php?id=61575235523785" target="_blank" rel="noreferrer">Facebook</a>
         <a href="https://x.com/kaarthaveerrya" target="_blank" rel="noreferrer">X (Twitter)</a>
