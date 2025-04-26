@@ -28,7 +28,7 @@ const ArtworkCategory = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://kaarthaveerya-studio.onrender.com/api/images/${categoryName}`)
+    fetch(`https://www.kaarthaveerya-studio.com/api/images/${categoryName}`)
       .then((res) => res.json())
       .then((data) => {
         setImages(data.reverse());
