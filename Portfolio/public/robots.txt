@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://your-frontend-url.com/sitemap.xml
