@@ -57,6 +57,16 @@
     .artworks-page h1{
       font-size: 1.5rem;
     }
+
+    .category-grid {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+    
+    }
+
+    .category-card{
+      height: 120px;
+    }
+
   }
   
   
