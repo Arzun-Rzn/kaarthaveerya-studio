@@ -10,7 +10,7 @@ const socials = [
   { name: "Twitter", icon: <FaTwitter />, link: "https://x.com/kaarthaveerrya" },
   { name: "Behance", icon: <FaBehance />, link: "https://www.behance.net/KaarthaveeryaArjun" },
   { name: "Pinterest", icon: <FaPinterest />, link: "https://in.pinterest.com/kaarthaveeryaa/_created/" },
-  { name: "LinkedIn", icon: <FaLinkedin />, link: "https://linkedin.com/" },
+  { name: "LinkedIn", icon: <FaLinkedin />, link: "https://linkedin.com/company/kaarthaveerya-studio" },
   { name: "Tumblr", icon: <FaTumblr />, link: "https://www.tumblr.com/blog/kaarthaveerya-arjun" },
   { name: "Reddit", icon: <FaReddit />, link: "https://www.reddit.com/u/kaarthaveerya/s/7MnUIMvA8D" }
 ];
