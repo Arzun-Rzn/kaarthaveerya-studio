@@ -45,7 +45,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy;2024  Kaarthaveerya Art Studio. All rights reserved.</p>
+        <p>&copy;2024  Kaarthaveerya Studio. All rights reserved.</p>
         <div className="footer-legal">
           <Link to="/terms">Terms & Conditions</Link>
           <Link to="/privacy">Privacy policy</Link>
