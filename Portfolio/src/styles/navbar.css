@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #dec4ff;
+  background-color: #80332e;
   padding: 1rem 2rem;
   height: 88px;
   margin-bottom: 0%;
@@ -19,7 +19,7 @@
 .navbar-links li a,
 .navbar-links .dropdown-title {
   text-decoration:none;
-  color: #333;
+  color: #ffffff;
   font-weight: 600;
   font-size: 1rem;
   transition: transform 0.3s ease, letter-spacing 0.3s ease, color 0.3s ease;
@@ -30,7 +30,7 @@
 .navbar-links .dropdown-title:hover {
   transform: scale(1.15);
   letter-spacing: 0.5px;
-  color: #000;
+  color: #e0e0e0;
 }
 
 .dropdown {
@@ -99,6 +99,7 @@
   transform: scale(1);
   font-weight: bold;
   font-size: large;
+  text-decoration: underline;
   /* text-decoration:underline; */
 }
 

@@ -1,16 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Typewriter } from 'react-simple-typewriter';
 import '../styles/home.css';
 
 const Home = () => {
   return (
     <main className="home">
       <section className="hero-section">
-        <h2>YOUR ART IS YOUR REFLECTION</h2>
+      <h2 className="quote-heading">
+        <span className="typewriter-wrapper">
+          <Typewriter
+            words={[
+              'YOUR ART IS YOUR REFLECTION',
+              'EVERYTHING YOU CAN IMAGINE IS REAL',
+              'LOGIC CAN ONLY TAKE YOU FROM A TO B',
+              'BUT IMAGINATION CAN TAKE YOU ANYWHERE',
+              'IMAGINATION IS THE BEGINNING OF ALL CREATION',
+              'ART IS THE LIE THAT ENABLES US TO REALIZE TRUTH',
+              'BAD ARTISTS COPY, GOOD ARTISTS STEAL',
+              'CREATIVITY IS INTELLIGENCE HAVING FUN',
+            ]}
+            loop={true}
+            cursor={false}
+            typeSpeed={40}
+            deleteSpeed={40}
+            delaySpeed={1800}
+          />
+        </span>
+      </h2>
+
+
         <p className="intro-text">
           Explore a collection of original artworks, inspirations, referances, thoughts, and stories — all born from the soul of a wandering artist.
         </p>
-        <h2>Featured Artworks</h2>
+        <h3>Featured Artworks</h3>
         <div className="featured-gallery">
           <div className="art-card">
             <img src="/images/art1.jpg" alt="Featured Art 1" />
