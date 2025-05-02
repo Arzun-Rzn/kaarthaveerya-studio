@@ -23,6 +23,9 @@ const About = () => {
           <p>
             Welcome to my world — not just to view art, but to feel it.
           </p>
+
+          <h3>Why I chose "Kaarthaveerya Arjun" as my pen name?</h3>
+          <br />
           <p>            
             Once upon a time, there lived a King — a King with a Thousand Arms. People called him Sahasra Baahu.
             But his real name is....... wait.
