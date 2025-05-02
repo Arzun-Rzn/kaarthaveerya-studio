@@ -29,8 +29,12 @@
   font-weight: 400;
 }
 
+.hero-section h4{
+  font-size: 28px;
+}
+
 .quote-heading {
-  min-height: 2em; /* Adjust based on font-size */
+  min-height: 4em; /* Adjust based on font-size */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,7 +144,15 @@ footer {
   }
 
   .hero-section h2 {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
+  }
+
+  .hero-section h4{
+    font-size: 22px;
+  }
+
+  .hero-section p{
+    font-size: 18px;
   }
 
   .intro-text {

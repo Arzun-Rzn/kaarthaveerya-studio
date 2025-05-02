@@ -29,7 +29,7 @@ const Home = () => {
         </span>
       </h2>
 
-
+        <h4>WELCOME TO MY WORLD</h4>
         <p className="intro-text">
           Explore a collection of original artworks, inspirations, referances, thoughts, and stories — all born from the soul of a wandering artist.
         </p>

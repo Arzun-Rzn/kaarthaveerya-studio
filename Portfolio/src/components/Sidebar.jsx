@@ -50,11 +50,11 @@ const Sidebar = () => {
         </span>
         <ul>
           <li><Link to="/" onClick={toggleSidebar}>Home</Link></li>
+          <li><Link to="/about" onClick={toggleSidebar}>About Artist</Link></li>
           <li><Link to="/artworks" onClick={toggleSidebar}>Artworks</Link></li>
           <li><Link to="/books" onClick={toggleSidebar}>Books</Link></li>
           <li><Link to="/artStore" onClick={toggleSidebar}>Art Store</Link></li>
-          <li><Link to="/bookStore" onClick={toggleSidebar}>Book Store</Link></li>
-          <li><Link to="/about" onClick={toggleSidebar}>Artist</Link></li>
+          <li><Link to="/bookStore" onClick={toggleSidebar}>Book Store</Link></li>         
           <li><Link to="/blog" onClick={toggleSidebar}>Blog</Link></li>
           <li><Link to="/connect" onClick={toggleSidebar}>Connect</Link></li>
           <li><Link to="/terms" onClick={toggleSidebar}>Terms of use</Link></li>
