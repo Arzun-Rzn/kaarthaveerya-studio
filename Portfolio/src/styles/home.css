@@ -115,7 +115,7 @@
 }
 
 .store-button {
-  background-color: #000000;
+  background-color: #7a1c1c;
   color: #ffffff;
   padding: 12px 24px;
   text-decoration: none;
@@ -144,11 +144,13 @@ footer {
   }
 
   .hero-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    font-weight: 650;
   }
 
   .hero-section h4{
     font-size: 22px;
+    font-weight: 400;
   }
 
   .hero-section p{

@@ -37,7 +37,8 @@
 @media (max-width: 768px) {
   .title {
     padding-top: 2rem;
-    margin-top: 0px; /* roomier mobile spacing */
+    margin-top: 0px; 
+    background-color:  #dcdcff ;/* roomier mobile spacing */
   }
 
 
@@ -50,7 +51,7 @@
   }
 
   .title h1 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     word-spacing: 0.4rem;
     letter-spacing: 1px;
     line-height: 1.6;
