@@ -23,7 +23,7 @@ const About = () => {
           <p>
             Welcome to my world — not just to view art, but to feel it.
           </p>
-
+          <br />
           <h3>Why I chose "Kaarthaveerya Arjun" as my pen name?</h3>
           <br />
           <p>            
