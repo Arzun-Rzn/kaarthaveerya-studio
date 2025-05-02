@@ -52,6 +52,11 @@
   
     
   @media screen and (max-width: 768px){
+    .about-artist-page {
+      padding: 5px 2px;
+      margin: 40px;
+    }
+
     .about-hero h1 {
       font-size: 1.4rem;
     }
