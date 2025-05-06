@@ -53,6 +53,7 @@ app.get('/api/images/:folder', async (req, res) => {
     const result = await cloudinary.search
       .expression(`folder:Artworks/${folder}`)
       .sort_by('created_at', 'desc')
+      .with_field("metadata")
       .max_results(30)
       .execute();
 
@@ -62,8 +63,8 @@ app.get('/api/images/:folder', async (req, res) => {
     if (result.resources.length > 0) {
       const formattedImages = result.resources.map((img) => ({
         src: img.secure_url,
-        title: img.context?.custom?.title || "Untitled", // Default title if missing
-        description: img.context?.custom?.description || "No description", // Default description if missing
+        title: img.metadta?.title || "Untitled", // Default title if missing
+        description: img.metadata?.description || "No description", // Default description if missing
       }));
       res.json(formattedImages);
     } else {
