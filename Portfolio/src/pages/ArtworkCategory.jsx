@@ -83,11 +83,11 @@ const ArtworkCategory = () => {
                   className="artwork-img"
                   loading="lazy"
                 />
-                <div className="image-info">
+                {/* <div className="image-info">
                   <h4>{img.title}</h4>
                   <p>{img.description}</p>
                   <small>{img.date}</small>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>
