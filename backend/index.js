@@ -21,6 +21,10 @@ app.use("/api/artworks", artworkRoutes);
 const adminRoutes = require("./routes/adminRoutes");
 app.use("/api/admin", adminRoutes);
 
+app.get("/ping", (req, res) => {
+  res.status(200).send("Backend is alive");
+});
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
