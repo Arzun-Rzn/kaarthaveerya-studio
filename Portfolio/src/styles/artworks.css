@@ -28,14 +28,14 @@
   }
   
   .category-card {
-    height: 180px;
-    background-color: #ffb2a5;
+    height: 100px;
+    background-color:  #bdbeff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
     text-align: center;
     padding: 20px;
   }
@@ -48,7 +48,7 @@
   
   .category-card:hover {
     transform: scale(0.88); 
-    background: #ff9b82;
+    background: #d7a5ff;
     box-shadow: 0px 15px 5px rgba(0, 0, 0, 0.25);
   }
 
