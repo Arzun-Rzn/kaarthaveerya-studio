@@ -33,6 +33,8 @@ const Blog = () => {
   return (
     <main className="blog-container">
       <h2>MY BLOGS</h2>
+      <br />
+      <br />
       <div className="blog-grid">
         {blogs.map(blog => (
           <Link to={blog.link} className="blog-card" key={blog.id}>
@@ -41,6 +43,8 @@ const Blog = () => {
           </Link>
         ))}
       </div>
+      <br />
+      <br />
     </main>
   );
 };

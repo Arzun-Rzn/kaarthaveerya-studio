@@ -20,6 +20,8 @@ const Books = () => {
   return (
     <main className="books-container">
       <h2>MY BOOKS</h2>
+      <br />
+      <br />
       <div className="books-grid">
         {books.map((book, index) => (
           <div key={index} className="book-card">

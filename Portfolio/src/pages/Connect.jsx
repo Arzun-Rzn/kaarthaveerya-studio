@@ -19,6 +19,8 @@ const Connect = () => {
   return (
     <main className="social-container">
       <h2>CONNECT WITH ME</h2>
+      <br />
+      <br />
       <div className="social-grid">
         {socials.map((item, index) => (
           <a
@@ -33,6 +35,7 @@ const Connect = () => {
           </a>
         ))}
       </div>
+      <br />
     </main>
   );
 };

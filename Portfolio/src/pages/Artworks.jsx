@@ -24,6 +24,8 @@ const Artworks = () => {
     <main className="artworks-page">
       <h1>ARTWORKS</h1>
       <p>Explore Categories</p>
+      <br />
+      <br />
       <div className="category-grid">
         {categoryList.map((cat, index) => (
           <Link 
@@ -37,9 +39,12 @@ const Artworks = () => {
           </Link>
         ))}
       </div>
+      <br />
+      <br />
       <div className="store-button-container">
-                <Link to="/artStore" className="store-button">Visit Art Store</Link>
-              </div>
+          <Link to="/artStore" className="store-button">Visit Art Store</Link>
+      </div>
+      <br />
     </main>
   );
 };
