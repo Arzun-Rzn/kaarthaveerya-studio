@@ -111,6 +111,8 @@ const ArtworksCategory = () => {
           Meanwhile explore other categories.
         </p>
       )}
+      <br />
+      <br />
     </main>
   );
 };

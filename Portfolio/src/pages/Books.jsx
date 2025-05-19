@@ -30,11 +30,8 @@ const Books = () => {
           </div>
         ))}
       </div>
-
-         {/* <div className="store-button-container">
-            <Link to="/artstore" className="store-button">Visit Art Store</Link>
-        </div> 
-        */}
+      <br />
+      <br />
     </main>
     
   );
