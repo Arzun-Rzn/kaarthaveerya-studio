@@ -1,5 +1,5 @@
 .artworks-category-page {
-  padding: 2rem;
+  padding: 1rem;
   max-width: 1200px;
   margin: auto;
   text-align: center;
@@ -21,6 +21,12 @@
 .masonry-grid {
   column-count: 2;
   column-gap: 2rem;
+}
+
+@media (max-width: 768px){
+  .masonry-grid{
+    column-gap: 1rem;
+  }
 }
 
 @media (min-width: 600px) {
