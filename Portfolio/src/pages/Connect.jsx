@@ -5,7 +5,7 @@ import { FaEnvelope, FaInstagram, FaYoutube,FaReddit, FaFacebook, FaTwitter, FaB
 const socials = [
   {name: "Gmail",icon: <FaEnvelope />,link: "mailto:kaarthaveeryaa.arjuna@gmail.com"},
   { name: "Instagram", icon: <FaInstagram />, link: "https://www.instagram.com/kaarthaveerya/"},
-  { name: "YouTube", icon: <FaYoutube />, link: "https://www.youtube.com/@KaarthaveeryaArjuna" },
+  { name: "YouTube", icon: <FaYoutube />, link: "https://www.youtube.com/@KaarthaveeryaArjun" },
   { name: "Facebook", icon: <FaFacebook />, link: "https://www.facebook.com/profile.php?id=61575235523785" },
   { name: "Twitter", icon: <FaTwitter />, link: "https://x.com/kaarthaveerrya" },
   { name: "Behance", icon: <FaBehance />, link: "https://www.behance.net/KaarthaveeryaArjun" },
