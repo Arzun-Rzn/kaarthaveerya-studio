@@ -10,7 +10,7 @@
   margin-top: 0rem;
   padding-top: 0.1px;
   padding-bottom: 0.1px;
-  background-color: #fff6f6;
+  background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
@@ -34,7 +34,7 @@
 }
 
 .quote-heading {
-  min-height: 4em; /* Adjust based on font-size */
+  min-height: 4em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +42,7 @@
 
 .typewriter-wrapper {
   display: inline-block;
-  min-width: 350px; /* Or use width based on your longest quote */
+  min-width: 350px;
   text-align: center;
 }
 
@@ -66,16 +66,16 @@
 
 .featured-gallery {
   margin: 50px;
-  column-count: 3;  /* 3 columns in desktop view */
-  column-gap: 40px; /* space between columns */
+  column-count: 3; 
+  column-gap: 40px; 
   margin-bottom: 30px;
 }
 
 .art-card {
-  width: 100%; /* Full width for the item inside each column */
+  width: 100%;
   text-align: center;
-  margin-bottom: 30px; /* Space between items */
-  break-inside: avoid; /* Avoid breaking images across columns */
+  margin-bottom: 30px;
+  break-inside: avoid; 
 }
 
 .art-card img {
@@ -98,11 +98,13 @@
 }
 
 .store-button {
-  background-color: #bdbeff;
-  color: #000000;
+  background-color: #000000;
+  color: #ffffff;
   padding: 12px 24px;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 80px;
+  border-width: 10px;
+  border-color: #ffffff;
   font-weight: 500;
   font-size: 16px;
   margin-bottom: 10px;
@@ -111,17 +113,15 @@
 }
 
 .store-button:hover {
-  background-color: #d7a5ff;
+  background-color: #cacaca;
   color: #000;
   transform: scale(0.88); 
 }
 
-/* Footer fix */
 footer {
   margin-top: auto;
 }
 
-/* Responsive Styles */
 @media screen and (max-width: 768px) {
   .hero-section {
     padding: 2rem 1rem;
@@ -154,12 +154,12 @@ footer {
   .featured-gallery {
     margin: 15px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 15px;
   }
 
   .art-card {
-    width: 100%; /* Let grid handle width */
+    width: 100%;
   }
 
   .store-button {

@@ -1,18 +1,12 @@
 import React from "react";
-import "../styles/bookStore.css"; // if you're using custom CSS too
+import "../styles/bookStore.css";
 
 const platforms = [
   {
     name: "Amazon KDP",
     logo: "/logos/amazonkdp.png",
     url: "https://kdp.amazon.com/en_US/bookshelf?ref_=kdp_kdp_BS_D_TN_bs",
-  },
-  // You can add more platforms here, like:
-  // {
-  //   name: "Gumroad",
-  //   logo: "https://your-logo-url.com",
-  //   url: "https://gumroad.com/your-store",
-  // },
+  }
 ];
 
 const BookStore = () => {

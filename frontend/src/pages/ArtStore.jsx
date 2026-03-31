@@ -42,7 +42,8 @@ const platforms = [
 const ArtStore = () => {
   return (
     <div className="art-store-page">
-      <h2>Visit these Platforms to buy my Art</h2>
+      <h1>ART STORE</h1>
+      <p>VISIT THESE PLATFORMS TO BUY MY ART</p>
       <div className="store-grid">
         {platforms.map((platform, index) => (
           <a

@@ -7,7 +7,6 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-top">
         <h1 className="footer-logo">KAARTHAVEERYA STUDIO</h1>
-        <p>Website developed by Nagarjuna Jogi</p>
           <a
             href="mailto:kaarthaveeryaa.arjuna@gmail.com"
             target="_blank"
@@ -27,6 +26,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-social">
+        <h4>CONNECT</h4>
         <a
           href="mailto:kaarthaveeryaa.arjuna@gmail.com"
           target="_blank"
