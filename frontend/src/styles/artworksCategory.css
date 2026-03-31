@@ -50,7 +50,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: auto; /* Ensure it expands naturally */
+  height: auto;
   transition: transform 0.2s ease;
 }
 

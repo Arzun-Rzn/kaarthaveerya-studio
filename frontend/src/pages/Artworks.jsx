@@ -22,7 +22,7 @@ const categoryList = [
 const Artworks = () => {
   return (
     <main className="artworks-page">
-      <h1>ARTWORKS</h1>
+      <h1>MY PORTFOLIO</h1>
       <p>Explore Categories</p>
       <br />
       <br />

@@ -1,3 +1,5 @@
+//backend/routes/adminRoutes.js
+
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
@@ -10,18 +12,18 @@ router.post("/login", async (req, res) => {
   const { username, password } = req.body;
 
   try {
-    // ✅ Check username
+    // Check username
     if (username !== process.env.ADMIN_USERNAME) {
       return res.status(401).json({ message: "Invalid username or password" });
     }
 
-    // ✅ Compare password with hashed password in .env
+    // Compare password with hashed password in .env
     const isMatch = await bcrypt.compare(password, process.env.ADMIN_HASH);
     if (!isMatch) {
       return res.status(401).json({ message: "Invalid username or password" });
     }
 
-    // ✅ Create JWT
+    // Create JWT
     const token = jwt.sign({ username }, process.env.JWT_SECRET, {
       expiresIn: "1d",
     });
