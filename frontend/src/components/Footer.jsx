@@ -16,12 +16,12 @@ const Footer = () => {
             📧 kaarthaveeryaa.arjuna@gmail.com
           </a>
         <div className="footer-links">
-          <Link to="/about">About Artist</Link>
-          <Link to="/artstore">Art store</Link>
-          <Link to="/artworks">Artworks</Link>
-          <Link to="/books">Books</Link>
-          <Link to="/blog">Blogs & Journals</Link>
-          <Link to="/connect">Connect</Link>         
+          <Link to="/about">ABOUT</Link>
+          <Link to="/artstore">ART STORE</Link>
+          <Link to="/artworks">PORTFOLIO</Link>
+          <Link to="/books">BOOKS</Link>
+          <Link to="/blog">BLOGS</Link>
+          <Link to="/connect">CONNECT</Link>         
         </div>
       </div>
 
