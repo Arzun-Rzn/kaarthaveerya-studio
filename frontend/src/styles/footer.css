@@ -36,9 +36,15 @@
   margin: 20px 0;
 }
 
+.footer-social{
+  gap: 34px;
+}
+
 .footer-social h4{
     display: none;
   }
+
+ 
 
 .footer-links a,
 .footer-legal a,
@@ -49,11 +55,48 @@
   transition: transform 0.3s ease;
 }
 
+.footer-social a {
+  font-size: 1.8rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+} 
+
+/* Tooltip text */
+.footer-social a::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  background-color: #222;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+/* Show on hover */
+.footer-social a:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
 .footer-links a:hover,
 .footer-legal a:hover,
 .footer-social a:hover {
   color: #fff;
   transform: scale(1.15);
+}
+
+.footer-social a:hover {
+  color: #fff;
+  transform: scale(1.4);
 }
 
 .footer-bottom {
