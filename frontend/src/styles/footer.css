@@ -36,6 +36,10 @@
   margin: 20px 0;
 }
 
+.footer-social h4{
+    display: none;
+  }
+
 .footer-links a,
 .footer-legal a,
 .footer-social a {
