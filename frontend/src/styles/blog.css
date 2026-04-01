@@ -50,11 +50,11 @@
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 30px;
+      gap: 50px;
     }
     
     .blog-container {
-      padding: 20px;
+      padding: 40px;
     }
 
     .blog-container h2{
@@ -62,7 +62,8 @@
     }
   
     .blog-card {
-      padding: 16px;
+      padding: 26px;
+      height: 150px;
     }
   
     .blog-card h3 {
