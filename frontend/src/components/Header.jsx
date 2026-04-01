@@ -14,6 +14,7 @@ const Header = ({ scrolled }) => {
 
       {/* NAV LINKS */}
       <nav className="nav-links">
+        <NavLink to="/">HOME</NavLink>
         <NavLink to="/about">ABOUT</NavLink>
         <NavLink to="/artworks">PORTFOLIO</NavLink>
         <NavLink to="/books">BOOKS</NavLink>

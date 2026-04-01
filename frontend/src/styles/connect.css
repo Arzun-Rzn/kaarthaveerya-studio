@@ -37,10 +37,11 @@
 }
 
 .social-card .icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.8rem;
+  margin-bottom: 0rem;
+  padding-bottom: 0rem;
   color: #000000; 
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .social-card p{
@@ -51,8 +52,8 @@
 @media screen and (max-width: 768px) {
   .social-grid {
     grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-    gap: 1rem;
-    margin: 20px;
+    gap: 2.8rem;
+    margin: 30px;
     
   }
 
@@ -61,13 +62,25 @@
   }
 
   .social-card {
-    padding: 0.6rem;
+    border-radius: 60px;
+    padding: 0.8rem;
+    height: 120px;
+    width: 120px;
     transform: scale(0.9);
     
   }
 
+  .social-card .icon{
+    font-size: 2rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
+    color: #000000; 
+    margin-top: 15px;
+  }
+
   .social-card p{
     font-size: 1rem;
+    margin-bottom: 20px;
   }
 
   .social-card:hover {
