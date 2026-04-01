@@ -3,6 +3,8 @@
     text-align: center;
     margin-top: 80px;
     margin-bottom: 80px;
+    margin-left: 40px;
+    margin-right: 40px;
   }
   
   .artworks-page h1 {
@@ -43,7 +45,7 @@
   }
   
   .category-card h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #000000;
     font-weight: 600;
   }

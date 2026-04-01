@@ -43,7 +43,7 @@ const ArtStore = () => {
   return (
     <div className="art-store-page">
       <h1>ART STORE</h1>
-      <p>VISIT THESE PLATFORMS TO BUY MY ART</p>
+      <h4>VISIT THESE PLATFORMS TO BUY MY ART</h4>
       <div className="store-grid">
         {platforms.map((platform, index) => (
           <a
