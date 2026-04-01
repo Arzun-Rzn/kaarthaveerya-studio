@@ -244,7 +244,8 @@
 
   /* BIG TITLE */
   .site-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: 800;
     text-align: center;
     line-height: 1.3;
   }
@@ -281,7 +282,8 @@
   .header.shrink .logo {
     width: 40px;
     height: 28px;
-    margin-left: 15px;
+    margin-left: 8px;
+    margin-bottom: 4px;
   }
 
   /* SMALL TITLE */
