@@ -1,3 +1,5 @@
+//Project-K/studio/frontend/src/pages/ArtStore.jsx
+
 import React from "react";
 import "../styles/artStore.css"; 
 

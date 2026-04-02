@@ -1,3 +1,5 @@
+//Project-K/studio/frontend/src/pages/AdminPanel.jsx
+
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";

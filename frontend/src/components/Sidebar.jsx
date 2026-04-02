@@ -1,3 +1,5 @@
+//Project-K/studio/frontend/src/components/Sidebar.jsx
+
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';

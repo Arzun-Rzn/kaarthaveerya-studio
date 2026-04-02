@@ -1,3 +1,5 @@
+//Project-K/studio/frontend/src/pages/BooksManager.jsx
+
 import React from 'react'
 
 const BooksManager = () => {

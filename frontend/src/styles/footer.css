@@ -1,3 +1,5 @@
+/*Project-K/studio/frontend/src/styles/footer.css*/
+
 .footer {
   background-color: #111;
   color: #ffffff;
@@ -134,11 +136,11 @@
     font-size: 1rem;
   }
 
-  /* 🔥 MAIN STRUCTURE */
+  /* MAIN STRUCTURE */
   .footer-links,
   .footer-social,
   .footer-legal {
-    flex-direction: column;   /* 👈 vertical columns */
+    flex-direction: column;   /* vertical columns */
     align-items: center;
     gap: 28px;
   }

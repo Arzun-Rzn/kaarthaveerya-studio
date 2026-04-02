@@ -1,3 +1,5 @@
+//Project-K/studio/frontend/src/pages/BlogsManager.jsx
+
 import React from 'react'
 
 const BlogsManager = () => {

@@ -1,3 +1,5 @@
+//Project-K/studio/frontend/src/pages/Terms.jsx
+
 import React from 'react';
 import '../styles/terms.css';
 

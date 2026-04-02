@@ -1,6 +1,6 @@
-/* =========================
-   HEADER BASE
-========================= */
+/*Project-K/studio/frontend/src/styles/header.css*/
+
+/* HEADER BASE  */
 .header {
   position: sticky;
   top: 0;
@@ -19,9 +19,7 @@
   width: 100%;
 }
 
-/* =========================
-   SHRINK STATE
-========================= */
+/* SHRINK STATE */
 .header.shrink {
   flex-direction: row;
   justify-content: space-between;
@@ -37,9 +35,7 @@
   box-shadow: 0 2px 0px rgba(0, 0, 0, 0.05);
 }
 
-/* =========================
-   LOGO + TITLE
-========================= */
+/* LOGO + TITLE */
 .header-left {
   display: flex;
   align-items: center;
@@ -79,9 +75,7 @@
   font-size: 1.2rem;
 }
 
-/* =========================
-   NAV LINKS
-========================= */
+/* NAV LINKS */
 .nav-links {
   display: flex;
   gap: 4rem;
@@ -114,9 +108,7 @@
 
 }
 
-/* =========================
-   LINK STYLING
-========================= */
+/* LINK STYLING */
 .nav-links a {
   text-decoration: none;
   color: #000;
@@ -137,9 +129,7 @@
   border-bottom: 2px solid black;
 }
 
-/* =========================
-   DROPDOWN
-========================= */
+/* DROPDOWN */
 .dropdown {
   position: relative;
   cursor: pointer;
@@ -207,18 +197,14 @@
   background: rgb(242, 242, 242);
 }
 
-/* =========================
-   SHRINK STATE FIX
-========================= */
+/* SHRINK STATE FIX */
 
-/* Ensure dropdown aligns nicely in row mode */
+/* dropdown aligns in row */
 .header.shrink .dropdown-menu {
   top: 90%;
 }
 
-/* =========================
-   RESPONSIVE (MOBILE)
-========================= */
+/* RESPONSIVE (MOBILE) */
 @media (max-width: 768px) {
 
   /* HEADER BASE */
@@ -227,7 +213,7 @@
     gap: 10px;
   }
 
-  /* 🔥 STACK LOGO + TITLE (BIG STATE) */
+  /* STACK LOGO + TITLE (BIG STATE) */
   .header-left {
     flex-direction: column;
     justify-content: center;
@@ -255,13 +241,11 @@
     display: none;
   }
 
-  /* =========================
-     SHRINK STATE (MOBILE)
-  ========================= */
+  /* SHRINK STATE (MOBILE) */
 
   .header.shrink {
     flex-direction: row;
-    justify-content: center; /* 👈 CENTER everything */
+    justify-content: center; /* CENTER everything */
     align-items: center;
     margin-top: 0px;
     margin-bottom: 25px;

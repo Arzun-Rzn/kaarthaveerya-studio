@@ -1,4 +1,4 @@
-//Portfolio/src/components/MainSection.jsx
+//Project-K/studio/frontend/src/components/MainSection.jsx
 
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
@@ -33,7 +33,8 @@ const MainSection = () => {
       <Route path="/artworks" element={<Artworks />} />
       <Route path="/artworks/:categorySlug" element={<ArtworksCategory />} />
       <Route path="/books" element={<Books />} />
-      <Route path="/connect" element={<Connect />} />   
+      <Route path="/connect" element={<Connect />} />  
+       
       <Route path="/admin" element={<AdminLogin />} /> 
       
       <Route

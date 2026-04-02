@@ -1,3 +1,5 @@
+//Project-K/studio/frontend/src/pages/Blogs.jsx
+
 import React from 'react';
 import '../styles/blog.css';
 import { Link } from 'react-router-dom';
