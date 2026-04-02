@@ -1,3 +1,5 @@
+//Project-K/studio/frontend/src/pages/BookStore.jsx
+
 import React from "react";
 import "../styles/bookStore.css";
 

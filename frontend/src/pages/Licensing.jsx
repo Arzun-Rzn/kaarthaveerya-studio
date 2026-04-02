@@ -1,3 +1,5 @@
+//Project-K/studio/frontend/src/pages/Licensing.jsx
+
 import React from 'react';
 import '../styles/licensing.css';
 

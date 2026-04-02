@@ -1,3 +1,5 @@
+//Project-K/studio/frontend/src/pages/ArtStoreManager.jsx
+
 import React from 'react'
 
 const ArtStoreManager = () => {

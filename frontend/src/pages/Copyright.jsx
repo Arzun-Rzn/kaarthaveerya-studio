@@ -1,3 +1,5 @@
+//Project-K/studio/frontend/src/pages/Copyright.jsx
+
 import React from 'react';
 import '../styles/copyright.css';
 

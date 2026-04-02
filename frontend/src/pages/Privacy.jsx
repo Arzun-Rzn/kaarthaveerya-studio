@@ -1,3 +1,5 @@
+//Project-K/studio/frontend/src/pages/Privacy.jsx
+
 import React from 'react';
 import '../styles/privacy.css';
 

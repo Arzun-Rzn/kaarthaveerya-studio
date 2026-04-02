@@ -1,3 +1,5 @@
+//Project-K/studio/frontend/src/pages/Connect.jsx
+
 import React from "react";
 import "../styles/connect.css";
 import { FaEnvelope, FaInstagram, FaYoutube,FaReddit, FaFacebook, FaTwitter, FaBehance, FaPinterest, FaLinkedin, FaArtstation, FaTumblr} from "react-icons/fa";
