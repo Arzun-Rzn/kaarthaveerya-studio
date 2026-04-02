@@ -8,7 +8,8 @@ import {
   FaPinterest,
   FaReddit,
   FaTumblr,
-  FaBehance
+  FaBehance,
+  FaArtstation
 } from "react-icons/fa";
 
 import { MdEmail } from "react-icons/md";
@@ -86,6 +87,10 @@ const Footer = () => {
 
         <a href="https://www.tumblr.com/blog/kaarthaveerya-arjun" target="_blank" rel="noreferrer" data-name="Tumblr">
           <FaTumblr />
+        </a>
+
+        <a href="https://www.artstation.com/kaarthaveerya" target="_blank" rel="noreferrer" data-name="ArtStation">
+          <FaArtstation />
         </a>
       </div>
 

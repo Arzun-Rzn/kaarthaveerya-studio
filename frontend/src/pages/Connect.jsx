@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/connect.css";
-import { FaEnvelope, FaInstagram, FaYoutube,FaReddit, FaFacebook, FaTwitter, FaBehance, FaPinterest, FaLinkedin, FaArtstation} from "react-icons/fa";
+import { FaEnvelope, FaInstagram, FaYoutube,FaReddit, FaFacebook, FaTwitter, FaBehance, FaPinterest, FaLinkedin, FaArtstation, FaTumblr} from "react-icons/fa";
 
 const socials = [
   {name: "Gmail",icon: <FaEnvelope />,link: "mailto:kaarthaveeryaa.arjuna@gmail.com"},
@@ -12,7 +12,8 @@ const socials = [
   { name: "Pinterest", icon: <FaPinterest />, link: "https://in.pinterest.com/kaarthaveeryaa/_created/" },
   { name: "LinkedIn", icon: <FaLinkedin />, link: "https://linkedin.com/company/kaarthaveerya-studio" },
   { name: "ArtStation", icon: <FaArtstation />, link: "https://www.artstation.com/kaarthaveerya" },
-  { name: "Reddit", icon: <FaReddit />, link: "https://www.reddit.com/u/kaarthaveerya/s/7MnUIMvA8D" }
+  { name: "Reddit", icon: <FaReddit />, link: "https://www.reddit.com/u/kaarthaveerya/s/7MnUIMvA8D" },
+  { name: "Tumblr", icon: <FaTumblr />, link: "https://www.tumblr.com/kaarthaveerya-arjun" }
 ];
 
 const Connect = () => {
