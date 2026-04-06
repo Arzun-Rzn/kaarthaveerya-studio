@@ -11,10 +11,10 @@ const socials = [
   { name: "Facebook", icon: <FaFacebook />, link: "https://www.facebook.com/profile.php?id=61575235523785" },
   { name: "Twitter", icon: <FaTwitter />, link: "https://x.com/kaarthaveerrya" },
   { name: "Behance", icon: <FaBehance />, link: "https://www.behance.net/KaarthaveeryaArjun" },
-  { name: "Pinterest", icon: <FaPinterest />, link: "https://in.pinterest.com/kaarthaveeryaa/_created/" },
+  { name: "Pinterest", icon: <FaPinterest />, link: "https://in.pinterest.com/kaarthaveeryaa/" },
   { name: "LinkedIn", icon: <FaLinkedin />, link: "https://linkedin.com/company/kaarthaveerya-studio" },
   { name: "ArtStation", icon: <FaArtstation />, link: "https://www.artstation.com/kaarthaveerya" },
-  { name: "Reddit", icon: <FaReddit />, link: "https://www.reddit.com/u/kaarthaveerya/s/7MnUIMvA8D" },
+  { name: "Reddit", icon: <FaReddit />, link: "https://www.reddit.com/user/kaarthaveeryaa/" },
   { name: "Tumblr", icon: <FaTumblr />, link: "https://www.tumblr.com/kaarthaveerya-arjun" }
 ];
 

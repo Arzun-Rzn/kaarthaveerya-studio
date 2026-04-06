@@ -13,7 +13,7 @@
 .admin-title {
   font-size: 28px;
   font-weight: bold;
-  margin-bottom: 24px;
+  margin-bottom: 84px;
   text-align: center;
   color: #333;
 }
@@ -27,22 +27,22 @@
 
 .admin-card {
   padding: 20px;
-  background-color: #af9fff;
-  border-radius: 10px;
+  background-color: #000000;
+  border-radius: 40px;
   text-align: center;
   cursor: pointer;
   font-weight: 500;
-  color: #040404;
+  color: #ffffff;
   transition: all 0.3s ease;
 }
 
 .admin-card:hover {
-  background-color: #d8b8ff;
+  background-color: #d1d1d1;
   color: #000000;
 }
 
 .admin-card.active {
-  background-color: #ff9881;
+  background-color: #7db5ff;
   color: rgb(0, 0, 0);
 }
 
@@ -88,13 +88,16 @@ select:focus {
 
 .admin-logout-button {
   margin: 10px;
-  padding: 8px 16px;
+  padding: 20px 40px;
   background-color: #000000;
   color: white;
+  font-size: larger;
+  font-weight: 600;
   border: none;
-  border-radius: 6px;
+  border-radius: 40px;
   cursor: pointer;
 }
 .admin-logout-button:hover {
-  background-color: #1f1f1f;
+  background-color: #bdbdbd;
+  color: #000000;
 }

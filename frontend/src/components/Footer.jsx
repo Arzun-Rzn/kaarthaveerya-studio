@@ -62,7 +62,7 @@ const Footer = () => {
           <FaXTwitter />
         </a>
 
-        <a href="https://www.youtube.com/@KaarthaveeryaArjuna" target="_blank" rel="noreferrer" data-name="Youtube">
+        <a href="https://www.youtube.com/@KaarthaveeryaArjun" target="_blank" rel="noreferrer" data-name="Youtube">
           <FaYoutube />
         </a>
 
@@ -70,12 +70,12 @@ const Footer = () => {
           <FaBehance />
         </a>
 
-        <a href="https://in.pinterest.com/kaarthaveeryaa/_created/" target="_blank" rel="noreferrer" data-name="Pinterest">
+        <a href="https://in.pinterest.com/kaarthaveeryaa/" target="_blank" rel="noreferrer" data-name="Pinterest">
           <FaPinterest />
         </a>
 
         <a
-          href="https://www.linkedin.com/in/YOUR-USERNAME/"
+          href="https://linkedin.com/company/kaarthaveerya-studio"
           target="_blank"
           rel="noreferrer"
           data-name="LinkedIn"
@@ -83,11 +83,11 @@ const Footer = () => {
           <FaLinkedin />
         </a>
 
-        <a href="https://www.reddit.com/u/kaarthaveerya/s/7MnUIMvA8D" target="_blank" rel="noreferrer" data-name="Reddit">
+        <a href="https://www.reddit.com/user/kaarthaveeryaa/" target="_blank" rel="noreferrer" data-name="Reddit">
           <FaReddit />
         </a>
 
-        <a href="https://www.tumblr.com/blog/kaarthaveerya-arjun" target="_blank" rel="noreferrer" data-name="Tumblr">
+        <a href="https://www.tumblr.com/kaarthaveerya-arjun" target="_blank" rel="noreferrer" data-name="Tumblr">
           <FaTumblr />
         </a>
 
