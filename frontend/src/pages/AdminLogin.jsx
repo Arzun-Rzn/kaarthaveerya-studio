@@ -1,7 +1,6 @@
 //Project-K/studio/frontend/src/pages/AdminLogin.jsx
 
 import { useState } from "react";
-import { useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/adminLogin.css";
@@ -16,13 +15,6 @@ const AdminLogin = () => {
 
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const inputs = document.querySelectorAll("input");
-    inputs.forEach((input) => {
-      input.dispatchEvent(new Event("input", { bubbles: true }));
-    });
-  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -47,13 +39,10 @@ const AdminLogin = () => {
     try {
       const res = await axios.post(
         "https://kaarthaveerya-studio.onrender.com/api/admin/login",
-        formData
+        { username, password }
       );
 
-      // Store token
       localStorage.setItem("adminToken", res.data.token);
-
-      // Redirect to admin panel
       navigate("/admin/panel");
 
     } catch (err) {
@@ -68,7 +57,25 @@ const AdminLogin = () => {
       <div className="admin-login-box">
         <h2 className="admin-login-title">Admin Login</h2>
 
-        <form onSubmit={handleLogin} className="admin-login-form">
+        <form
+          onSubmit={handleLogin}
+          className="admin-login-form"
+          autoComplete="off"
+        >
+          {/* Hidden dummy fields to prevent autofill */}
+          <input
+            type="text"
+            name="fake-username"
+            autoComplete="username"
+            style={{ display: "none" }}
+          />
+          <input
+            type="password"
+            name="fake-password"
+            autoComplete="current-password"
+            style={{ display: "none" }}
+          />
+
           <input
             type="text"
             name="username"
@@ -76,7 +83,7 @@ const AdminLogin = () => {
             className="admin-login-input"
             value={formData.username}
             onChange={handleChange}
-            onInput={handleChange}
+            autoComplete="new-username"
             required
           />
 
@@ -87,7 +94,7 @@ const AdminLogin = () => {
             className="admin-login-input"
             value={formData.password}
             onChange={handleChange}
-            onInput={handleChange}
+            autoComplete="new-password"
             required
           />
 
