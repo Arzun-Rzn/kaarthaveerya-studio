@@ -9,7 +9,7 @@ const categories = [
   { title: "References", slug: "references" },
   { title: "Illustrations", slug: "illustrations" },
   { title: "Inspirations", slug: "inspirations" },
-  { title: "Random Learnings", slug: "random-learnings" }, // fixed typo
+  { title: "Random Learnings", slug: "random-learnings" }, 
   { title: "Anatomy Art", slug: "anatomy-art" },
   { title: "Muses", slug: "muses" },
   { title: "Malavika Mohanan", slug: "malavika-mohanan" },
@@ -69,7 +69,6 @@ const ArtworkUploadCard = () => {
         {
           headers: {
             Authorization: `Bearer ${token}`,
-            "Content-Type": "multipart/form-data",
           },
         }
       );
