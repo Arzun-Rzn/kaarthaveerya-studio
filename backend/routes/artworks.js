@@ -1,24 +1,26 @@
-//backend/routes/artworks.js
+// backend/routes/artworks.js
+
 
 const express = require("express");
 const router = express.Router();
 
-const Artwork = require("../models/Artwork");
 const { uploadArtwork } = require("../controllers/artworkController");
 const protectAdmin = require("../middleware/authMiddleware");
 const upload = require("../middleware/upload");
 
+// ====================== ADMIN ROUTES ======================
 
-// POST /api/artworks/upload (UPDATED - secure + cloudinary)
+// POST /api/artworks/upload
 router.post(
   "/upload",
-  protectAdmin,
+  protectAdmin,                  
   upload.single("image"),
   uploadArtwork
 );
 
+// ====================== PUBLIC ROUTES ======================
 
-// GET /api/artworks/category/:slug?page=1&limit=12 (KEEP THIS)
+// GET /api/artworks/category/:slug?page=1&limit=12
 router.get("/category/:slug", async (req, res) => {
   const { slug } = req.params;
   const page = parseInt(req.query.page) || 1;
@@ -28,16 +30,17 @@ router.get("/category/:slug", async (req, res) => {
     const query = { category: slug };
 
     const total = await Artwork.countDocuments(query);
-
     const artworks = await Artwork.find(query)
+      .select("title description imageUrl") 
       .skip((page - 1) * limit)
       .limit(limit)
-      .sort({ _id: -1 });
+      .sort({ createdAt: -1 });            
 
     res.json({
       artworks,
       currentPage: page,
       totalPages: Math.ceil(total / limit),
+      totalArtworks: total,
     });
 
   } catch (err) {
