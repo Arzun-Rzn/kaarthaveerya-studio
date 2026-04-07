@@ -19,27 +19,24 @@ const Privacy = () => {
 
       <section>
         <h2>2. Information We Collect</h2>
-        <p>
-          We may collect the following types of information:
+        <p>We may collect the following types of information:</p>
           <ul>
             <li>Personal Information (such as name, email address) when you voluntarily provide it</li>
             <li>Usage Data (such as pages visited, time spent, and device information)</li>
             <li>Social Media links you interact with (e.g., WhatsApp, LinkedIn, Behance, etc.)</li>
           </ul>
-        </p>
+        
       </section>
 
       <section>
         <h2>3. How We Use Your Information</h2>
-        <p>
-          We use the collected information to:
+        <p>We use the collected information to:</p>
           <ul>
             <li>Respond to inquiries or messages sent via social or email links</li>
             <li>Improve website experience, design, and performance</li>
             <li>Monitor site traffic and usage trends using analytics tools</li>
             <li>Showcase relevant art content, blogs, or store updates</li>
           </ul>
-        </p>
       </section>
 
       <section>
@@ -83,14 +80,12 @@ const Privacy = () => {
 
       <section>
         <h2>9. Your Rights</h2>
-        <p>
-          You have the right to:
+        <p>You have the right to:</p>
           <ul>
             <li>Request access to the personal information we hold about you</li>
             <li>Request correction or deletion of your data</li>
             <li>Opt out of communications or tracking tools (like cookies)</li>
           </ul>
-        </p>
       </section>
 
       <section>
