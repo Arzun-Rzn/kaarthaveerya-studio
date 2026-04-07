@@ -112,9 +112,8 @@
 .nav-links a {
   text-decoration: none;
   color: #000;
-  font-weight: 600;
   font-size: 18px;
-
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   transition: transform 0.2s ease, letter-spacing 0.2s ease;
 }
 
@@ -137,7 +136,7 @@
 
 /* Title */
 .dropdown-title {
-  font-weight: 600;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 18px;
   transition: 0.2s ease;
 }

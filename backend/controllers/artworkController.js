@@ -52,7 +52,7 @@ const uploadArtwork = async (req, res) => {
     const newArtwork = new Artwork({
       title,
       description,
-      category,
+      category: category.toLowerCase(),
       imageUrl: result.secure_url,
       publicId: result.public_id,
     });
