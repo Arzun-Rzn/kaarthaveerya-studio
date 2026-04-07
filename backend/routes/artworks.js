@@ -6,6 +6,7 @@ const router = express.Router();
 
 const { uploadArtwork } = require("../controllers/artworkController");
 const protectAdmin = require("../middleware/authMiddleware");
+const Artwork = require("../models/Artwork");
 const upload = require("../middleware/upload");
 
 // ====================== ADMIN ROUTES ======================
