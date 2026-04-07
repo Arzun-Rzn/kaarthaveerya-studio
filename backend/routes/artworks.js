@@ -1,13 +1,16 @@
 // backend/routes/artworks.js
 
-
 const express = require("express");
 const router = express.Router();
-
-const { uploadArtwork } = require("../controllers/artworkController");
 const protectAdmin = require("../middleware/authMiddleware");
 const Artwork = require("../models/Artwork");
 const upload = require("../middleware/upload");
+const {
+  uploadArtwork,
+  getAllArtworksAdmin,
+  deleteArtwork,
+  updateArtwork,
+} = require("../controllers/artworkController");
 
 // ====================== ADMIN ROUTES ======================
 
@@ -49,5 +52,14 @@ router.get("/category/:slug", async (req, res) => {
     res.status(500).json({ message: "Error fetching artworks" });
   }
 });
+
+// GET all artworks (admin)
+router.get("/admin", protectAdmin, getAllArtworksAdmin);
+
+// DELETE artwork
+router.delete("/:id", protectAdmin, deleteArtwork);
+
+// UPDATE artwork
+router.put("/:id", protectAdmin, updateArtwork);
 
 module.exports = router;
