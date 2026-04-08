@@ -125,16 +125,18 @@
 @media screen and (max-width: 768px) {
 
   .footer {
-    padding: 30px 15px;
+    padding: 20px 15px;
     font-size: 0.9rem;
+    padding-top: 20px;
   }
 
   .footer-logo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .footer-top a {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   /* MAIN STRUCTURE */
@@ -143,7 +145,7 @@
   .footer-legal {
     flex-direction: column;   /* vertical columns */
     align-items: center;
-    gap: 28px;
+    gap: 16px;
   }
 
   .footer-social{
@@ -154,16 +156,16 @@
 
   /* spacing between sections */
   .footer-links {
-    margin-top: 45px;
+    margin-top: 40px;
   }
 
   .footer-social {
-    margin-top: 80px;
-    margin-bottom: 60px;
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
 
   .footer-bottom {
-    margin-top: 40px;
+    margin-top: 20px;
     padding-top: 10px;
     font-size: 0.8rem;
   }
@@ -173,7 +175,7 @@
   }
 
   .footer-legal {
-    margin-top: 60px;
+    margin-top: 20px;
   }
 
   /* text size */
@@ -184,7 +186,7 @@
   }
 
   .footer-social a{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
 }
