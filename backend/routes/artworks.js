@@ -5,7 +5,7 @@ const router = express.Router();
 const protectAdmin = require("../middleware/authMiddleware");
 const upload = require("../middleware/upload"); 
 const Artwork = require("../models/Artwork");
-const { uploadArtwork } = require("../controllers/artworkController");
+const { uploadArtwork, getAllArtworksAdmin, deleteArtwork, updateArtwork } = require("../controllers/artworkController");
 
 // POST /api/artworks/upload
 router.post(
