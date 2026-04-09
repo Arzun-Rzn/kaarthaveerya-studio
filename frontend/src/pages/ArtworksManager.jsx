@@ -1,3 +1,5 @@
+//Project-K/studio/frontend/src/pages/ArtworksManager.jsx
+
 import React, { useState } from "react";
 import ArtworkUploadCard from "./ArtworkUploadCard";
 import ArtEditsList from "./ArtEditsList";

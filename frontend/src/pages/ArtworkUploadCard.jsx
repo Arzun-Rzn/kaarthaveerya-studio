@@ -1,3 +1,6 @@
+//Project-K/studio/frontend/src/pages/ArtworkUploadCard.jsx
+
+
 import React, { useState } from "react";
 import axios from "axios";
 import "../styles/artworkUpload.css";
@@ -25,6 +28,7 @@ const ArtworkUploadCard = () => {
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
   const [imageUrl, setImageUrl] = useState("");
+  const [publicId, setPublicId] = useState("");
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState("");
 
@@ -42,6 +46,7 @@ const ArtworkUploadCard = () => {
           formData
         );
         setImageUrl(res.data.secure_url);
+        setPublicId(res.data.public_id);
         setUploading(false);
       } catch (error) {
         console.error("Image upload failed:", error);
@@ -63,6 +68,7 @@ const ArtworkUploadCard = () => {
         description,
         imageUrl,
         category,
+        publicId,
       });
 
       setMessage(res.data.message || "Artwork uploaded successfully!");
@@ -72,6 +78,7 @@ const ArtworkUploadCard = () => {
       setTitle("");
       setDescription("");
       setCategory("");
+      setPublicId("");
       setImageUrl("");
     } catch (error) {
       console.error("Error saving artwork:", error);
