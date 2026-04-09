@@ -22,6 +22,7 @@ const categories = [
   { title: 'Expressions', slug: 'expressions' },
 ];
 
+const token = localStorage.getItem("adminToken");
 
 const ArtworkUploadCard = () => {
   const [title, setTitle] = useState("");
@@ -69,6 +70,11 @@ const ArtworkUploadCard = () => {
         imageUrl,
         category,
         publicId,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
 
       setMessage(res.data.message || "Artwork uploaded successfully!");
