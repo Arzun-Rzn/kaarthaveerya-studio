@@ -3,6 +3,7 @@
 const express = require("express");
 const router = express.Router();
 const protectAdmin = require("../middleware/authMiddleware");
+const Artwork = require("../models/Artwork");
 const {uploadArtwork} = require("../controllers/artworkController");
 
 // POST /api/artworks/upload
@@ -11,5 +12,22 @@ router.post(
   protectAdmin,                  
   uploadArtwork
 );
+
+// GET /api/artworks/category/:slug
+router.get("/category/:slug", async (req, res) => {
+  try {
+    const { slug } = req.params;
+
+    const artworks = await Artwork.find({ category: slug })
+      .select("title imageUrl")
+      .sort({ createdAt: -1 });
+
+    res.status(200).json({ artworks });
+
+  } catch (error) {
+    console.error("Fetch artworks error:", error);
+    res.status(500).json({ message: "Failed to fetch artworks" });
+  }
+});
 
 module.exports = router;
