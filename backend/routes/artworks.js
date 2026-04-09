@@ -32,4 +32,11 @@ router.get("/category/:slug", async (req, res) => {
   }
 });
 
+
+router.get("/admin", protectAdmin, getAllArtworksAdmin);
+
+router.delete("/:id", protectAdmin, deleteArtwork);
+
+router.put("/:id", protectAdmin, updateArtwork);
+
 module.exports = router;

@@ -74,4 +74,63 @@ const uploadArtwork = async (req, res) => {
   }
 };
 
-module.exports = { uploadArtwork };
+// GET ALL ARTWORKS (ADMIN)
+const getAllArtworksAdmin = async (req, res) => {
+  try {
+    const artworks = await Artwork.find().sort({ createdAt: -1 });
+    res.status(200).json(artworks);
+  } catch (error) {
+    console.error("Fetch admin artworks error:", error);
+    res.status(500).json({ message: "Failed to fetch artworks" });
+  }
+};
+
+// DELETE
+const deleteArtwork = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const artwork = await Artwork.findById(id);
+    if (!artwork) {
+      return res.status(404).json({ message: "Artwork not found" });
+    }
+
+    // delete from cloudinary
+    await cloudinary.uploader.destroy(artwork.publicId);
+
+    await Artwork.findByIdAndDelete(id);
+
+    res.status(200).json({ message: "Deleted successfully" });
+
+  } catch (error) {
+    console.error("Delete error:", error);
+    res.status(500).json({ message: "Delete failed" });
+  }
+};
+
+// UPDATE (title + description only)
+const updateArtwork = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { title, description } = req.body;
+
+    const updated = await Artwork.findByIdAndUpdate(
+      id,
+      { title, description },
+      { new: true }
+    );
+
+    res.status(200).json(updated);
+
+  } catch (error) {
+    console.error("Update error:", error);
+    res.status(500).json({ message: "Update failed" });
+  }
+};
+
+module.exports = {
+  uploadArtwork,
+  getAllArtworksAdmin,
+  deleteArtwork,
+  updateArtwork,
+};
