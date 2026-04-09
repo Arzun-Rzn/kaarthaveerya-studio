@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import ArtworkUploadCard from "./ArtworkUploadCard";
+import ArtworkManager from "./ArtworksManager";
 import BooksManager from "./BooksManager";
 import ArtStoreManager from "./ArtStoreManager";
 import BookStoreManager from "./BookStoreManager";
@@ -70,7 +70,7 @@ const AdminPanel = () => {
       </div>
 
       <div className="admin-section">
-        {activeSection === "artworks" && <ArtworkUploadCard />}
+        {activeSection === "artworks" && <ArtworkManager />}
         {activeSection === "books" && <BooksManager />}
         {activeSection === "artstore" && <ArtStoreManager />}
         {activeSection === "bookstore" && <BookStoreManager />}
