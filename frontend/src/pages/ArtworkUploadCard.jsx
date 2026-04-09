@@ -37,8 +37,9 @@ const ArtworkUploadCard = () => {
     const file = e.target.files[0];
     if (file) {
       const formData = new FormData();
-     formData.append("file", file);
-     formData.append("upload_preset", "artworks_upload"); 
+      formData.append("file", file);
+      formData.append("upload_preset", "artworks_upload"); 
+      formData.append("folder", `kaarthaveerya/artworks/${category}`);
 
       setUploading(true);
       try {
