@@ -34,7 +34,7 @@ const ArtworkUploadCard = () => {
     const selectedFile = e.target.files[0];
     if (selectedFile) {
       setFile(selectedFile);
-      setPreview(URL.createObjectURL(selectedFile)); // preview
+      setPreview(URL.createObjectURL(selectedFile)); 
     }
   };
 
@@ -49,7 +49,7 @@ const ArtworkUploadCard = () => {
     formData.append("title", title);
     formData.append("description", description);
     formData.append("category", category);
-    formData.append("image", file); // IMPORTANT: must match backend
+    formData.append("image", file);
 
     const token = localStorage.getItem("adminToken");
 
@@ -62,7 +62,6 @@ const ArtworkUploadCard = () => {
         {
           headers: {
             Authorization: `Bearer ${token}`,
-            "Content-Type": "multipart/form-data",
           },
         }
       );
