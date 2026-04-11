@@ -41,7 +41,7 @@ const AdminPanel = () => {
           className={`admin-card ${activeSection === "artworks" ? "active" : ""}`} 
           onClick={() => setActiveSection("artworks")}
         >
-          Manage Artworks
+          Manage Portfolio
         </div>
         <div 
           className={`admin-card ${activeSection === "books" ? "active" : ""}`} 
