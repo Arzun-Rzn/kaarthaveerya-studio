@@ -20,7 +20,7 @@ const ArtworksCategory = () => {
   const limit = 12;
 
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
   }, [currentPage]);
@@ -44,7 +44,9 @@ const ArtworksCategory = () => {
     fetchArtworks();
   }, [categorySlug, currentPage]);
 
-  const formattedTitle = categorySlug.replace(/-/g, " ").toUpperCase();
+  const formattedTitle = categorySlug
+  .replace(/-/g, " ")
+  .replace(/\b\w/g, (c) => c.toUpperCase());
 
   const handlePrevPage = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
@@ -70,6 +72,7 @@ const ArtworksCategory = () => {
                 <img
                   src={art.imageUrl}
                   alt={art.title}
+                  loading="lazy"
                   onClick={() => setOpenIndex(index)}
                 />
                 <div className="artwork-info">
@@ -100,6 +103,8 @@ const ArtworksCategory = () => {
             close={() => setOpenIndex(-1)}
             slides={artworks.map((art) => ({
               src: art.imageUrl,
+              title: art.title,
+              description: art.description,
             }))}
             index={openIndex}
             plugins={[Zoom, Captions]}

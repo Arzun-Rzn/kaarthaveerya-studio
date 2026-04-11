@@ -6,7 +6,7 @@ import Header from './components/Header.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import MainSection from './components/MainSection.jsx';
 import Footer from './components/Footer.jsx';
-
+import { Toaster } from "react-hot-toast";
 import './App.css';
 
 const App = () => {
@@ -36,6 +36,7 @@ const App = () => {
   return (
     <Router>
       <ScrollToTop />
+      <Toaster position="top-right" />
 
       <div className="app-container">
 

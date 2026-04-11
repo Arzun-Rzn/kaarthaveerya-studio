@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import toast from "react-hot-toast";
 import "../styles/artEditsList.css";
 
 const formatCategory = (category) => {
@@ -97,9 +98,12 @@ const ArtEditsList = ({ refresh }) => {
                         },
                       }
                     );
+                    toast.success("Artwork deleted successfully");
+                    toast.success("Changes saved");
                     setDeleteId(null);
                     fetchArtworks();
                   } catch (err) {
+                    toast.error("Failed to delete artwork");
                     console.error(err);
                   }
                 }}
@@ -173,12 +177,14 @@ const ArtEditsList = ({ refresh }) => {
                         },
                       }
                     );
+                    toast.success("Artwork updated successfully");
 
                     setEditData(null);
                     setTitle("");
                     setDescription("");
                     fetchArtworks();
                   } catch (err) {
+                    toast.error("Failed to update artwork");
                     console.error(err);
                   }
                 }}
