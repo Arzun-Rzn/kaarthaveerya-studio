@@ -208,7 +208,7 @@ const ArtEditsList = ({ refresh }) => {
           <div className="art-grid">
             {filteredArtworks.map((art) => (
               <div className="art-card" key={art._id}>
-                <img src={art.imageUrl} alt={art.title} />
+                <img src={art.imageUrl} alt={art.title} loading="lazy" />
 
                 <div className="overlay">
                   <p>{art.title}</p>

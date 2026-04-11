@@ -1,29 +1,52 @@
 //Project-K/studio/frontend/src/pages/ArtworksManager.jsx
 
 import React, { useState } from "react";
-import ArtworkUploadCard from "./ArtworkUploadCard";
 import ArtEditsList from "./ArtEditsList";
+import ArtworkUploadCard from './ArtworkUploadCard';
+import '../styles/artworksManager.css'
 
-const ArtworkManager = () => {
-  const [refresh, setRefresh] = useState(false);
-  const [editData, setEditData] = useState(null);
-
-  const triggerRefresh = () => setRefresh(!refresh);
+const ArtworksManager = () => {
+  const [mode, setMode] = useState(null);
 
   return (
     <div>
-      <ArtworkUploadCard
-        onSuccess={triggerRefresh}
-        editData={editData}
-        clearEdit={() => setEditData(null)}
-      />
+      {!mode && (
+        <div className="artwork-choice-container">
+          <h3>Artworks Studio</h3>
 
-      <ArtEditsList
-        refresh={refresh}
-        onEdit={(art) => setEditData(art)}
-      />
+          <div className="choice-buttons">
+            <button onClick={() => setMode("upload")}>
+              Upload Artwork
+            </button>
+
+            <button onClick={() => setMode("manage")}>
+              Manage Artworks
+            </button>
+          </div>
+        </div>
+      )}
+
+      {mode === "upload" && (
+        <>
+          <button className="back-btn" onClick={() => setMode(null)}>
+            ← Back
+          </button>
+
+          <ArtworkUploadCard />
+        </>
+      )}
+
+      {mode === "manage" && (
+        <>
+          <button className="back-btn" onClick={() => setMode(null)}>
+            ← Back
+          </button>
+
+          <ArtEditsList />
+        </>
+      )}
     </div>
   );
 };
 
-export default ArtworkManager;
+export default ArtworksManager;
