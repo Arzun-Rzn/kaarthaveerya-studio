@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../styles/artworkUpload.css";
+import toast from "react-hot-toast";
 
 const categories = [
   { title: 'Original Artworks', slug: 'original-artworks' },
@@ -67,6 +68,7 @@ const ArtworkUploadCard = () => {
       );
 
       setMessage(res.data.message || "Artwork uploaded successfully!");
+      toast.success("Artwork uploaded successfully")
 
       // reset
       setTitle("");
