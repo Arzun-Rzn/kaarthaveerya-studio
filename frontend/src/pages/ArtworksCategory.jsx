@@ -103,13 +103,30 @@ const ArtworksCategory = () => {
             close={() => setOpenIndex(-1)}
             slides={artworks.map((art) => ({
               src: art.imageUrl,
-              title: art.title,
-              description: art.description,
             }))}
             index={openIndex}
-            plugins={[Zoom, Captions]}
+            plugins={[Zoom]}
             carousel={{ finite: true }}
             controller={{ closeOnBackdropClick: true }}
+            render={{
+              slide: ({ slide }) => {
+                const currentArt = artworks[openIndex];
+
+                return (
+                  <div className="custom-slide-container">
+                    <img src={slide.src} alt="" className="lightbox-image" />
+
+                    {/* Bottom Overlay Panel */}
+                    <div className="lightbox-overlay">
+                      <h3>{currentArt?.title}</h3>
+                      <div className="lightbox-description">
+                        {currentArt?.description}
+                      </div>
+                    </div>
+                  </div>
+                );
+              },
+            }}
           />
         </>
       ) : (
