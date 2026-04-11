@@ -88,9 +88,14 @@
 
 .artwork-info p {
   margin: 0;
-  font-size: 0.9rem;
+  margin-top: 4px;
+  font-size: 14px;
   color: #000000;
   word-break: break-word;
+
+  display: -webkit-box;
+  /*-webkit-line-clamp: 3; */
+  overflow: hidden
 }
 
 .pagination-controls {
