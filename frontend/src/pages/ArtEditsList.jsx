@@ -70,7 +70,7 @@ const ArtEditsList = ({ refresh }) => {
 
   useEffect(() => {
     fetchArtworks();
-  }, [refresh, page]);
+  }, [refresh, page, filter, search]);
 
   useEffect(() => {
     const handleEsc = (e) => {
@@ -253,6 +253,7 @@ const ArtEditsList = ({ refresh }) => {
             setSearch(e.target.value);
             setPage(1); 
           }}
+          className="search-input"
         />
 
         {loading ? (
