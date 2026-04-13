@@ -55,7 +55,7 @@
 @media screen and (max-width: 768px) {
   .social-grid {
     grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-    gap: 2.8rem;
+    gap: 2.2rem;
     margin: 30px;
     
   }

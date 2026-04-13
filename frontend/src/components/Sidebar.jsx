@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 import '../styles/sidebar.css';
+import { FiChevronLeft } from 'react-icons/fi';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,14 @@ const Sidebar = () => {
     };
 
     if (isOpen) {
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    } else {
+      document.body.style.position = '';
+      document.body.style.width = '';
+    }
+
+    if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
       document.body.classList.add('sidebar-open'); // Disable body scroll
     } else {
@@ -34,6 +43,8 @@ const Sidebar = () => {
     };
   }, [isOpen]);
 
+
+
   return (
     <>
       {!isOpen && (
@@ -44,7 +55,7 @@ const Sidebar = () => {
 
       <div ref={sidebarRef} className={`sidebar ${isOpen ? 'open' : ''}`}>
         <span className="close-btn" onClick={toggleSidebar} aria-label="Close Menu">
-          <FiX size={24} />
+          <FiChevronLeft size={32} />
         </span>
         <ul>
           <li><Link to="/" onClick={toggleSidebar}>HOME</Link></li>
