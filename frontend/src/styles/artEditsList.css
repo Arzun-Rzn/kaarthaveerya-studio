@@ -235,3 +235,11 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+.search-input {
+  padding: 8px 12px;
+  margin: 10px 0;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 45px;
+}

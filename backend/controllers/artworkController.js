@@ -74,21 +74,35 @@ const uploadArtwork = async (req, res) => {
   }
 };
 
-// GET ALL ARTWORKS (ADMIN)
-// GET ALL ARTWORKS (ADMIN - PAGINATED)
+// GET ALL ARTWORKS (ADMIN - PAGINATED + FILTER + SEARCH)
 const getAllArtworksAdmin = async (req, res) => {
   try {
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 12;
+    const category = req.query.category || "all";
+    const search = req.query.search || "";
 
     const skip = (page - 1) * limit;
 
-    const artworks = await Artwork.find()
+    // build query object
+    let query = {};
+
+    // category filter
+    if (category !== "all") {
+      query.category = category;
+    }
+
+    // search filter (case-insensitive)
+    if (search) {
+      query.title = { $regex: search, $options: "i" };
+    }
+
+    const artworks = await Artwork.find(query)
       .sort({ createdAt: -1 })
       .skip(skip)
       .limit(limit);
 
-    const total = await Artwork.countDocuments();
+    const total = await Artwork.countDocuments(query);
 
     res.status(200).json({
       artworks,

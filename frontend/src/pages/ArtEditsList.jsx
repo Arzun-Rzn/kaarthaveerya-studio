@@ -39,7 +39,7 @@ const ArtEditsList = ({ refresh }) => {
   const [editData, setEditData] = useState(null);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-
+  const [search, setSearch] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [error, setError] = useState("");
@@ -51,7 +51,7 @@ const ArtEditsList = ({ refresh }) => {
       setLoading(true);
 
       const res = await axios.get(
-        `https://kaarthaveerya-studio.onrender.com/api/artworks/admin?page=${page}&limit=12`,
+        `https://kaarthaveerya-studio.onrender.com/api/artworks/admin?page=${page}&limit=12&category=${filter}&search=${search}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -100,11 +100,6 @@ const ArtEditsList = ({ refresh }) => {
       document.body.style.overflow = "auto";
     };
   }, [deleteId, editData]);
-
-  const filteredArtworks =
-    filter === "all"
-      ? artworks
-      : artworks.filter((art) => art.category === filter);
 
   return (
     <>
@@ -250,14 +245,24 @@ const ArtEditsList = ({ refresh }) => {
           ))}
         </select>
 
+        <input
+          type="text"
+          placeholder="Search artworks..."
+          value={search}
+          onChange={(e) => {
+            setSearch(e.target.value);
+            setPage(1); 
+          }}
+        />
+
         {loading ? (
           <div className="loader"></div>
-        ) : filteredArtworks.length === 0 ? (
+        ) : artworks.length === 0 ? (
           <p>No artworks in this category yet</p>
         ) : (
           <>
             <div className="art-grid">
-              {filteredArtworks.map((art) => (
+              {artworks.map((art) => (
                 <div className="art-card" key={art._id}>
                   <img src={art.imageUrl} alt={art.title} loading="lazy" />
 
@@ -285,7 +290,7 @@ const ArtEditsList = ({ refresh }) => {
               ))}
             </div>
 
-            {/* ✅ PAGINATION */}
+            {/* PAGINATION */}
             <div className="pagination">
               <button
                 disabled={page === 1}
