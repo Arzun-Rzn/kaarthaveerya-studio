@@ -75,10 +75,28 @@ const uploadArtwork = async (req, res) => {
 };
 
 // GET ALL ARTWORKS (ADMIN)
+// GET ALL ARTWORKS (ADMIN - PAGINATED)
 const getAllArtworksAdmin = async (req, res) => {
   try {
-    const artworks = await Artwork.find().sort({ createdAt: -1 });
-    res.status(200).json(artworks);
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 12;
+
+    const skip = (page - 1) * limit;
+
+    const artworks = await Artwork.find()
+      .sort({ createdAt: -1 })
+      .skip(skip)
+      .limit(limit);
+
+    const total = await Artwork.countDocuments();
+
+    res.status(200).json({
+      artworks,
+      total,
+      page,
+      totalPages: Math.ceil(total / limit),
+    });
+
   } catch (error) {
     console.error("Fetch admin artworks error:", error);
     res.status(500).json({ message: "Failed to fetch artworks" });

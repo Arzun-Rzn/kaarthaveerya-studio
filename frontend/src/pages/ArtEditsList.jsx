@@ -34,9 +34,11 @@ const categories = [
 const ArtEditsList = ({ refresh }) => {
   const [artworks, setArtworks] = useState([]);
   const [filter, setFilter] = useState("all");
-
+  const [loading, setLoading] = useState(true);
   const [deleteId, setDeleteId] = useState(null);
   const [editData, setEditData] = useState(null);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -46,23 +48,58 @@ const ArtEditsList = ({ refresh }) => {
 
   const fetchArtworks = async () => {
     try {
+      setLoading(true);
+
       const res = await axios.get(
-        "https://kaarthaveerya-studio.onrender.com/api/artworks/admin",
+        `https://kaarthaveerya-studio.onrender.com/api/artworks/admin?page=${page}&limit=12`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         }
       );
-      setArtworks(res.data);
+
+      setArtworks(res.data.artworks);
+      setTotalPages(res.data.totalPages);
     } catch (error) {
       console.error("Fetch error:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
   useEffect(() => {
     fetchArtworks();
-  }, [refresh]);
+  }, [refresh, page]);
+
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") {
+        if (deleteId) setDeleteId(null);
+        if (editData) {
+          setEditData(null);
+          setTitle("");
+          setDescription("");
+          setError("");
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [deleteId, editData]);
+
+  useEffect(() => {
+    if (deleteId || editData) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [deleteId, editData]);
 
   const filteredArtworks =
     filter === "all"
@@ -73,8 +110,8 @@ const ArtEditsList = ({ refresh }) => {
     <>
       {/* DELETE MODAL */}
       {deleteId && (
-        <div className="modal-overlay">
-          <div className="modal">
+        <div className="modal-overlay" onClick={() => setDeleteId(null)}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
             <h3>Delete Artwork</h3>
             <p>Do you really want to delete this artwork?</p>
 
@@ -99,7 +136,6 @@ const ArtEditsList = ({ refresh }) => {
                       }
                     );
                     toast.success("Artwork deleted successfully");
-                    toast.success("Changes saved");
                     setDeleteId(null);
                     fetchArtworks();
                   } catch (err) {
@@ -117,8 +153,8 @@ const ArtEditsList = ({ refresh }) => {
 
       {/* EDIT MODAL */}
       {editData && (
-        <div className="modal-overlayy">
-          <div className="modal">
+        <div className="modal-overlayy" onClick={() => setEditData(null)}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
             <h3>Edit Artwork</h3>
 
             <input
@@ -200,7 +236,13 @@ const ArtEditsList = ({ refresh }) => {
       <div className="art-edits-container">
         <h3>Manage Artworks</h3>
 
-        <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+        <select
+          value={filter}
+          onChange={(e) => {
+            setFilter(e.target.value);
+            setPage(1);
+          }}
+        >
           {categories.map((cat, i) => (
             <option key={i} value={cat}>
               {formatCategory(cat)}
@@ -208,37 +250,62 @@ const ArtEditsList = ({ refresh }) => {
           ))}
         </select>
 
-        {filteredArtworks.length === 0 ? (
+        {loading ? (
+          <div className="loader"></div>
+        ) : filteredArtworks.length === 0 ? (
           <p>No artworks in this category yet</p>
         ) : (
-          <div className="art-grid">
-            {filteredArtworks.map((art) => (
-              <div className="art-card" key={art._id}>
-                <img src={art.imageUrl} alt={art.title} loading="lazy" />
+          <>
+            <div className="art-grid">
+              {filteredArtworks.map((art) => (
+                <div className="art-card" key={art._id}>
+                  <img src={art.imageUrl} alt={art.title} loading="lazy" />
 
-                <div className="overlay">
-                  <p>{art.title}</p>
+                  <div className="overlay">
+                    <p>{art.title}</p>
 
-                  <div className="actions">
-                    <button
-                      onClick={() => {
-                        setEditData(art);
-                        setTitle(art.title);
-                        setDescription(art.description);
-                        setError("");
-                      }}
-                    >
-                      Edit
-                    </button>
+                    <div className="actions">
+                      <button
+                        onClick={() => {
+                          setEditData(art);
+                          setTitle(art.title);
+                          setDescription(art.description);
+                          setError("");
+                        }}
+                      >
+                        Edit
+                      </button>
 
-                    <button onClick={() => setDeleteId(art._id)}>
-                      Delete
-                    </button>
+                      <button onClick={() => setDeleteId(art._id)}>
+                        Delete
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+
+            {/* ✅ PAGINATION */}
+            <div className="pagination">
+              <button
+                disabled={page === 1}
+                onClick={() => setPage((prev) => prev - 1)}
+              >
+                Prev
+              </button>
+
+              <span>
+                Page {page} of {totalPages}
+              </span>
+
+              <button
+                disabled={page === totalPages}
+                onClick={() => setPage((prev) => prev + 1)}
+              >
+                Next
+              </button>
+            </div>
+          </>
         )}
       </div>
     </>
