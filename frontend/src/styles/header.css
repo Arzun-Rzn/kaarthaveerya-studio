@@ -39,7 +39,7 @@
 .header-left {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 
   text-decoration: none;
   color: inherit;
@@ -67,7 +67,7 @@
 
 /* SMALL (SHRINK) STATE */
 .header.shrink .logo {
-  width: 42px;
+  width: 54px;
   height: 28px;
 }
 
