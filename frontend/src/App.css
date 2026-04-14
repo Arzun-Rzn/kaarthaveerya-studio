@@ -6,10 +6,6 @@ html, body, #root {
   padding: 0;
 }
 
-.app-container {
-  overflow-x: hidden;
-}
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -86,6 +82,10 @@ main {
 html {
   scrollbar-width: thin;
   scrollbar-color: #bbbbbb transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(199, 199, 199, 0.6);
 }
 
 @media screen and (max-width: 768px) {
