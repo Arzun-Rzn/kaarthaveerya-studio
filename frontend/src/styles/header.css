@@ -16,7 +16,7 @@
 
   width: 100%;
 
-  transition: all 0.2s ease;
+  transition: padding 0.25s ease, gap 0.25s ease;
 }
 
 /* SHRINK STATE */
@@ -26,7 +26,7 @@
   align-items: center;
 
   padding: 6px 16px;
-  gap: 0;
+  gap: 8px;
 
   box-shadow: 0 2px 0px rgba(0, 0, 0, 0.05);
 }
@@ -41,13 +41,15 @@
   color: inherit;
 }
 
-/* BIG STATE */
+/* BASE SIZE (IMPORTANT: fixed layout size) */
 .logo {
   width: 228px;
   height: 120px;
   border-radius: 10px;
 
-  transition: all 0.2s ease;
+  transform-origin: left center;
+  transition: transform 0.25s ease;
+  will-change: transform;
 }
 
 .site-title {
@@ -58,17 +60,18 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 
-  transition: all 0.2s ease;
+  transform-origin: left center;
+  transition: transform 0.25s ease;
+  will-change: transform;
 }
 
-/* SHRINK STATE */
+/* SHRINK USING TRANSFORM (NOT WIDTH/HEIGHT) */
 .header.shrink .logo {
-  width: 54px;
-  height: 28px;
+  transform: scale(0.25);
 }
 
 .header.shrink .site-title {
-  font-size: 1.2rem;
+  transform: scale(0.27);
 }
 
 /* NAV LINKS */
@@ -82,7 +85,7 @@
   margin: 0;
   margin-right: 20px;
 
-  transition: all 0.2s ease;
+  transition: gap 0.25s ease;
 }
 
 /* SHRINK STATE */
@@ -102,7 +105,7 @@
   font-size: 18px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  transition: transform 0.2s ease, letter-spacing 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 /* HOVER */
@@ -125,7 +128,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: bold;
-  transition: 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .header.shrink .dropdown-title {
@@ -226,14 +229,12 @@
     gap: 8px;
   }
 
+  /* TRANSFORM for mobile too */
   .header.shrink .logo {
-    width: 48px;
-    height: 28px;
+    transform: scale(0.28);
   }
 
   .header.shrink .site-title {
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.6px;
+    transform: scale(0.45);
   }
 }
