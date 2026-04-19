@@ -22,14 +22,6 @@ const Sidebar = () => {
     };
 
     if (isOpen) {
-      document.body.style.position = 'fixed';
-      document.body.style.width = '100%';
-    } else {
-      document.body.style.position = '';
-      document.body.style.width = '';
-    }
-
-    if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
       document.body.classList.add('sidebar-open'); // Disable body scroll
     } else {

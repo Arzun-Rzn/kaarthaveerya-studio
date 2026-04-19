@@ -13,16 +13,11 @@ html, body, #root {
 }
 
 html {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-main {
-  flex: 1;
-  padding-top: 40px; /* controls gap below header */
 }
 
 .app-container {
@@ -31,62 +26,31 @@ main {
   min-height: 100vh;
 }
 
-/* Sticky wrapper */
-.top-section {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: white;
-  height: 220px;
-  transition:none;
+/* MAIN CONTENT OFFSET (IMPORTANT) */
+/* This replaces your old top-section spacing safely */
+main {
+  flex: 1;
+  padding-top: 0px;
 }
 
-.top-section.shrink {
-  height: 60px; /* FIXED */
-}
-
-/* Always SAME layout (no direction change) */
-.top-section-inner {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  transition: gap 0.3s ease;
-}
-
-/* Initial state (fake vertical layout) */
-.top-section:not(.shrink) .top-section-inner {
-  flex-direction: column;
-  justify-content: center;
-  gap: 40px; /* THIS ADDS GAP */
-}
-
-/* Shrink state */
-.top-section.shrink .top-section-inner {
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0;
-}
-
-/* CUSTOM SCROLLBAR (DESKTOP) */
+/* CUSTOM SCROLLBAR */
 
 /* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
-  width: 4px; /* thin */
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent; 
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #c2c2c2; /* light grey */
+  background-color: #c2c2c2;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #b5b5b5; /* slightly darker on hover */
+  background-color: #b5b5b5;
 }
 
 /* Firefox */
@@ -97,10 +61,4 @@ html {
 
 ::-webkit-scrollbar-thumb {
   background-color: rgba(199, 199, 199, 0.6);
-}
-
-@media screen and (max-width: 768px) {
-  .top-section.shrink {
-    height: 80px; /* FIXED */
-}
 }

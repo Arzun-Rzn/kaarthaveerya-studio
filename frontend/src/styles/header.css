@@ -1,6 +1,6 @@
 /*Project-K/studio/frontend/src/styles/header.css*/
 
-/* HEADER BASE  */
+/* HEADER BASE */
 .header {
   position: sticky;
   top: 0;
@@ -12,11 +12,11 @@
   align-items: center;
 
   padding: 30px 20px;
-  margin-top: 60px;
   gap: 56px;
 
-  transition: padding 0.2s ease, gap 0.2s ease;
   width: 100%;
+
+  transition: all 0.2s ease;
 }
 
 /* SHRINK STATE */
@@ -25,13 +25,9 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: 4px 16px;
+  padding: 6px 16px;
   gap: 0;
-  padding-left: 16px;
-  padding-right: 0px;
-  top: 0%;
-  padding-top: 0%;
-  margin-top: 0%;
+
   box-shadow: 0 2px 0px rgba(0, 0, 0, 0.05);
 }
 
@@ -65,7 +61,7 @@
   transition: all 0.2s ease;
 }
 
-/* SMALL (SHRINK) STATE */
+/* SHRINK STATE */
 .header.shrink .logo {
   width: 54px;
   height: 28px;
@@ -83,18 +79,10 @@
   justify-content: center;
   align-items: center;
 
-  list-style: none;
-  padding: 0;
   margin: 0;
   margin-right: 20px;
 
   transition: all 0.2s ease;
-}
-
-/* TOP STATE */
-.header:not(.shrink) .nav-links {
-  justify-content: center;
-  width: auto;
 }
 
 /* SHRINK STATE */
@@ -103,9 +91,8 @@
   gap: 2rem;
 }
 
-.header.shrink .nav-links a{
+.header.shrink .nav-links a {
   font-size: 14px;
-
 }
 
 /* LINK STYLING */
@@ -123,9 +110,8 @@
   transform: scale(1.2);
 }
 
-/* ACTIVE LINK */
+/* ACTIVE */
 .nav-links a.active {
-
   border-bottom: 2px solid black;
 }
 
@@ -135,7 +121,6 @@
   cursor: pointer;
 }
 
-/* Title */
 .dropdown-title {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
@@ -143,19 +128,18 @@
   transition: 0.2s ease;
 }
 
-.header.shrink .dropdown-title{
+.header.shrink .dropdown-title {
   font-size: 14px;
 }
 
-/* Hover effect */
 .dropdown-title:hover {
   transform: scale(1.05);
 }
 
-/* Menu */
+/* MENU */
 .dropdown-menu {
   position: absolute;
-  top: 90%;
+  top: 100%;
   left: 0;
 
   display: none;
@@ -173,16 +157,16 @@
 }
 
 .dropdown-right .dropdown-menu {
-  right: 0;
-  left: -35px;
+  right: -25px;
+  left: auto;
 }
 
-/* Show on hover */
+/* SHOW */
 .dropdown:hover .dropdown-menu {
   display: flex;
 }
 
-/* Links inside dropdown */
+/* DROPDOWN LINKS */
 .dropdown-menu a {
   padding: 8px 16px;
   text-decoration: none;
@@ -192,29 +176,19 @@
   transition: transform 0.3s ease;
 }
 
-/* Hover inside dropdown */
 .dropdown-menu a:hover {
   transform: scale(1.08);
   background: rgb(242, 242, 242);
 }
 
-/* SHRINK STATE FIX */
-
-/* dropdown aligns in row */
-.header.shrink .dropdown-menu {
-  top: 90%;
-}
-
-/* RESPONSIVE (MOBILE) */
+/* MOBILE */
 @media (max-width: 768px) {
 
-  /* HEADER BASE */
   .header {
     padding: 20px 15px;
     gap: 10px;
   }
 
-  /* STACK LOGO + TITLE (BIG STATE) */
   .header-left {
     flex-direction: column;
     justify-content: center;
@@ -223,13 +197,11 @@
     text-align: center;
   }
 
-  /* BIG LOGO */
   .logo {
     width: 170px;
     height: 90px;
   }
 
-  /* BIG TITLE */
   .site-title {
     font-size: 2.2rem;
     font-weight: 800;
@@ -237,46 +209,31 @@
     line-height: 1.3;
   }
 
-  /* HIDE NAV LINKS */
   .nav-links {
     display: none;
   }
 
-  /* SHRINK STATE (MOBILE) */
-
   .header.shrink {
-    flex-direction: row;
-    justify-content: center; /* CENTER everything */
-    align-items: center;
-    margin-top: 0px;
-    margin-bottom: 25px;
-
-    padding: 8px 10px;
-    gap: 0;
-  }
-
-  /* SIDE BY SIDE */
-  .header.shrink .header-left {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    padding: 16px 10px;
+  }
+
+  .header.shrink .header-left {
+    flex-direction: row;
     gap: 8px;
   }
 
-  /* SMALL LOGO */
   .header.shrink .logo {
     width: 48px;
     height: 28px;
-    margin-left: 8px;
-    margin-bottom: 4px;
   }
 
-  /* SMALL TITLE */
   .header.shrink .site-title {
-    font-size: 1rem;
     font-size: 18px;
-    font-weight:700;
+    font-weight: 700;
     letter-spacing: 0.6px;
   }
-
 }
