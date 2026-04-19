@@ -1,7 +1,7 @@
 /*Project-K/studio/frontend/src/styles/sidebar.css*/
 
 .menu-icon {
-  position:absolute;
+  position: fixed;
   top: 15px;
   left: 10px;
   cursor: pointer;

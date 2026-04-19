@@ -15,25 +15,28 @@ const App = () => {
 
   const [scrolled, setScrolled] = useState(false);
 
-    useEffect(() => {
-      const trigger = document.getElementById("scroll-trigger");
+  useEffect(() => {
+    const trigger = document.getElementById("scroll-trigger");
 
-      const observer = new IntersectionObserver(
-        ([entry]) => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Only update after initial render
+        if (window.scrollY > 0) {
           setScrolled(!entry.isIntersecting);
-        },
-        {
-          root: null,
-          threshold: 0,
         }
-      );
+      },
+      {
+        root: null,
+        threshold: 0,
+      }
+    );
 
-      if (trigger) observer.observe(trigger);
+    if (trigger) observer.observe(trigger);
 
-      return () => {
-        if (trigger) observer.unobserve(trigger);
-      };
-    }, []);
+    return () => {
+      if (trigger) observer.unobserve(trigger);
+    };
+  }, []);
 
   return (
     <Router>
@@ -42,13 +45,9 @@ const App = () => {
 
       <div className="app-container">
 
-        <div className={`top-section ${scrolled ? "shrink" : ""}`}>
-          <Sidebar />
-
-          <div className="top-section-inner">
-           <Header scrolled={scrolled} />
-          </div>
-        </div>
+        {/* Direct rendering — no top-section */}
+        <Sidebar />
+        <Header scrolled={scrolled} />
 
         <div id="scroll-trigger"></div>
 
