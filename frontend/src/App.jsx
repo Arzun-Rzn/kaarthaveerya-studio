@@ -1,10 +1,11 @@
 /*Project-K/studio/frontend/src/App.jsx */
 
 import { BrowserRouter as Router } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import ScrollToTop from './components/ScrollToTop';
-import Header from './components/Header.jsx';
+import BigHeader from './components/BigHeader.jsx';
+import CompactHeader from './components/CompactHeader.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import MainSection from './components/MainSection.jsx';
 import Footer from './components/Footer.jsx';
@@ -13,17 +14,13 @@ import './App.css';
 
 const App = () => {
 
-  const [scrolled, setScrolled] = useState(false);
+  const [showCompact, setShowCompact] = useState(false);
+  const headerRef = useRef(null);
 
   useEffect(() => {
-    const trigger = document.getElementById("scroll-trigger");
-
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Only update after initial render
-        if (window.scrollY > 0) {
-          setScrolled(!entry.isIntersecting);
-        }
+        setShowCompact(!entry.isIntersecting);
       },
       {
         root: null,
@@ -31,10 +28,14 @@ const App = () => {
       }
     );
 
-    if (trigger) observer.observe(trigger);
+    if (headerRef.current) {
+      observer.observe(headerRef.current);
+    }
 
     return () => {
-      if (trigger) observer.unobserve(trigger);
+      if (headerRef.current) {
+        observer.unobserve(headerRef.current);
+      }
     };
   }, []);
 
@@ -45,11 +46,15 @@ const App = () => {
 
       <div className="app-container">
 
-        {/* Direct rendering — no top-section */}
         <Sidebar />
-        <Header scrolled={scrolled} />
 
-        <div id="scroll-trigger"></div>
+        {/* Big header stays in flow */}
+        <div ref={headerRef}>
+          <BigHeader />
+        </div>
+
+        {/* Compact header ALWAYS mounted */}
+        <CompactHeader visible={showCompact} />
 
         <main>
           <MainSection />
