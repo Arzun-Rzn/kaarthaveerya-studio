@@ -18,7 +18,7 @@
   
   .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
     gap: 80px;
   }
   
@@ -26,6 +26,7 @@
     background:#e8e8e8;
     border-radius: 62px;
     padding: 24px;
+    height: 180px;
     color: #fff;
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;

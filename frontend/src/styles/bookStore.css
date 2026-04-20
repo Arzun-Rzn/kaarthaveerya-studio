@@ -40,7 +40,8 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    height: 200px; 
+    height: 240px; 
+    width: 280px;
     text-align: center;
   }
   
