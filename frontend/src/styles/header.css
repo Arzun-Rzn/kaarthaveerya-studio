@@ -1,7 +1,9 @@
 /*Project-K/studio/frontend/src/styles/header.css*/
 
-/* HEADER BASE */
-.header {
+/* =========================
+   BIG HEADER (DESKTOP + MOBILE BASE)
+========================= */
+.big-header {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -15,20 +17,6 @@
   gap: 56px;
 
   width: 100%;
-
-  transition:  padding 0.3s ease, gap 0.3s ease;
-}
-
-/* SHRINK STATE */
-.header.shrink {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 6px 16px;
-  gap: 0;
-
-  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.05);
 }
 
 /* LOGO + TITLE */
@@ -42,38 +30,19 @@
 }
 
 /* BIG STATE */
-.logo {
+.big-header .logo {
   width: 228px;
   height: 120px;
   border-radius: 10px;
-
-  transition: all 0.3s ease;
 }
 
-.site-title {
+.big-header .site-title {
   font-size: 4.5rem;
   font-weight: bold;
   margin: 0;
 
   letter-spacing: 2px;
   text-transform: uppercase;
-
-  transition: all 0.3s ease;
-}
-
-.logo,
-.site-title {
-  will-change: width, height, font-size;
-}
-
-/* SHRINK STATE */
-.header.shrink .logo {
-  width: 54px;
-  height: 28px;
-}
-
-.header.shrink .site-title {
-  font-size: 1.2rem;
 }
 
 /* NAV LINKS */
@@ -86,36 +55,22 @@
 
   margin: 0;
   margin-right: 20px;
-
-  transition: all 0.3s ease;
 }
 
-/* SHRINK STATE */
-.header.shrink .nav-links {
-  justify-content: flex-end;
-  gap: 2rem;
-}
-
-.header.shrink .nav-links a {
-  font-size: 14px;
-}
-
-/* LINK STYLING */
 .nav-links a {
   text-decoration: none;
   color: #000;
   font-size: 18px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  transition: transform 0.3s ease, letter-spacing 0.3s ease;
+
+  transition: transform 0.3s ease;
 }
 
-/* HOVER */
 .nav-links a:hover {
   transform: scale(1.2);
 }
 
-/* ACTIVE */
 .nav-links a.active {
   border-bottom: 2px solid black;
 }
@@ -130,18 +85,12 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: bold;
-  transition: 0.3s ease;
-}
-
-.header.shrink .dropdown-title {
-  font-size: 14px;
 }
 
 .dropdown-title:hover {
   transform: scale(1.05);
 }
 
-/* MENU */
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -161,17 +110,10 @@
   z-index: 1000;
 }
 
-.dropdown-right .dropdown-menu {
-  right: -25px;
-  left: auto;
-}
-
-/* SHOW */
 .dropdown:hover .dropdown-menu {
   display: flex;
 }
 
-/* DROPDOWN LINKS */
 .dropdown-menu a {
   padding: 8px 16px;
   text-decoration: none;
@@ -186,72 +128,116 @@
   background: rgb(242, 242, 242);
 }
 
-/* MOBILE */
+/* =========================
+   COMPACT HEADER (REPLACES SHRINK)
+========================= */
+.compact-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1100;
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0px 12px;
+  gap: 0;
+
+  /* HIDDEN STATE */
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* VISIBLE STATE */
+.compact-header.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* SMALL STATE */
+.compact-header .logo {
+  width: 54px;
+  height: 28px;
+}
+
+.compact-header .site-title {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.compact-header .nav-links {
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.compact-header .nav-links a {
+  font-size: 14px;
+}
+
+.compact-header .dropdown-title {
+  font-size: 14px;
+}
+
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 768px) {
 
-  /* HEADER BASE */
-  .header {
+  /* BIG HEADER MOBILE */
+  .big-header {
     padding: 20px 15px;
     gap: 10px;
-
-    transition: padding 0.3s ease, gap 0.3s ease;
   }
 
-  /* STABILIZE LAYOUT */
-  .header-left {
+  .big-header .header-left {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 8px;
     text-align: center;
-
-    min-height: 34px;
   }
 
-  /* LOGO */
-  .logo {
+  .big-header .logo {
     width: 170px;
     height: 90px;
-
-    transition: width 0.3s ease, height 0.3s ease;
   }
 
-  /* TITLE */
-  .site-title {
+  .big-header .site-title {
     font-size: 2.2rem;
     font-weight: 800;
     text-align: center;
     line-height: 1.3;
-
-    transition: font-size 0.3s ease;
   }
 
-  /* HIDE NAV */
+  /* HIDE NAV ON MOBILE */
   .nav-links {
     display: none;
   }
 
-  /* SHRINK STATE */
-  .header.shrink {
-    flex-direction: row;
+  /* COMPACT MOBILE */
+  .compact-header {
     justify-content: center;
-    align-items: center;
-
-    padding: 12px 10px; /* smoother than 16px */
+    padding: 4px 10px;
   }
 
-  .header.shrink .header-left {
+  .compact-header .header-left {
     flex-direction: row;
     gap: 8px;
   }
 
-  /* REDUCED SIZE JUMP (IMPORTANT FIX) */
-  .header.shrink .logo {
+  .compact-header .logo {
     width: 48px;
     height: 28px;
   }
 
-  .header.shrink .site-title {
+  .compact-header .site-title {
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.6px;

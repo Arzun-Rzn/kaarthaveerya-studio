@@ -1,12 +1,12 @@
-//Project-K/studio/frontend/src/components/Header.jsx
+//Project-K/studio/frontend/src/components/CompactHeader.jsx
 
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "../styles/header.css";
 
-const Header = ({ scrolled }) => {
+const CompactHeader = ({ visible }) => {
   return (
-    <header className={`header ${scrolled ? "shrink" : ""}`}>
+    <header className={`compact-header ${visible ? "show" : ""}`}>
 
       <Link to="/" className="header-left">
         <img src="/assets/LogoK.png" alt="Logo" className="logo" />
@@ -45,4 +45,4 @@ const Header = ({ scrolled }) => {
   );
 };
 
-export default Header;
+export default CompactHeader;
