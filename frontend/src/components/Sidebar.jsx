@@ -11,7 +11,16 @@ const Sidebar = () => {
   const sidebarRef = useRef(null);
 
   const toggleSidebar = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(prev => {
+      const nextState = !prev;
+
+      // When opening → reset scroll
+      if (!prev && sidebarRef.current) {
+        sidebarRef.current.scrollTop = 0;
+      }
+
+      return nextState;
+    });
   };
 
   useEffect(() => {
@@ -49,6 +58,12 @@ const Sidebar = () => {
         <span className="close-btn" onClick={toggleSidebar} aria-label="Close Menu">
           <FiChevronLeft size={32} />
         </span>
+
+        <div className="sidebar-header">
+          <img src="/assets/LogoK.png" alt="Logo" className="sidebar-logo" />
+          <h2 className="sidebar-title">KAARTHAVEERYA STUDIO</h2>
+        </div>
+
         <ul>
           <li><Link to="/" onClick={toggleSidebar}>HOME</Link></li>
           <li><Link to="/about" onClick={toggleSidebar}>ABOUT</Link></li>
